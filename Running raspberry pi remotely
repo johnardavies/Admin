@@ -33,7 +33,7 @@ Start a screen session which we'll call apicall
 pi $ screen -S apicall
 
 4. Change directory to where the programme you want to run is 
-pi $ cd destination_file_path
+pi $ cd destination_file_path_for_file
 
 5. Run the programme
 pi $ python prog.py

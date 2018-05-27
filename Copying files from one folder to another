@@ -1,0 +1,26 @@
+from shutil import copyfile
+import os
+
+#Gets the filepaths of files in a folder
+def getim_list(path):
+    return[os.path.join(path,f) for f in os.listdir(path) if f.endswith('jpg')]
+
+pathlist=r"path to input folder'
+destpath=r"path to output folder'
+
+f=getim_list(pathlist)
+
+
+for i in range(1,len(f)):
+     statinfo= os.stat(f[i])
+     #Filters out files smaller than a certain sise
+     if statinfo.st_size > 8923: 
+         #Creates the destination file path
+         filename=os.path.basename(f[i])
+         nam=os.path.splitext(filename)[0]
+         dst=destpath+'\\'+nam+'.jpg' 
+         #Copies the file
+         copyfile(f[i], dst) 
+     else:
+      #Do nothing
+      None

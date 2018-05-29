@@ -23,7 +23,7 @@ for i in range(len(df)):
     origfile=pathlist+'\\'+row['file']
     print(origfile)
     row = df.iloc[i]  
-    #Where there is no data on CA status
+    #Where the area is not in a ca
     if str(row['NAME'])=='nan':
         dest=destpath_outofsample+'\\'+row['file']
         copyfile(origfile, dest)

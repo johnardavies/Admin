@@ -1,0 +1,38 @@
+import pandas as pd
+from shutil import copyfile
+import os
+
+
+#Splits the data into three folders conditional on the attached names
+
+#The destination filepaths
+pathlist=r"filepath\Londonrand190518processed"
+destpath_ca=r"filepath\ca"
+destpath_not_ca=r"filepath\not_ca"
+destpath_outofsample=r"fileparg\out_of_sample_ca"
+
+#Reads in the data on the coded image which has information on location in terms of long lat and area ca status
+df = pd.read_csv("filepath\\photo_info290518.csv")
+
+#Stick the coordinates back to get the filepath
+df["file"] = df["lat"].map(str)+','+ df["lon"].map(str)+'.jpg'
+
+#Loop through the lines
+for i in range(len(df)): 
+    print(len(df))
+    origfile=pathlist+'\\'+row['file']
+    print(origfile)
+    row = df.iloc[i]  
+    #Where there is no data on CA status
+    if str(row['NAME'])=='nan':
+        dest=destpath_outofsample+'\\'+row['file']
+        copyfile(origfile, dest)
+    #Where there is no data on area ca status
+    elif str(row['NAME'])=='NO DATA CURRENTLY AVAILABLE FOR THIS DISTRICT' :
+        dest=destpath_not_ca+'\\'+row['file']
+        copyfile(origfile, dest)
+    else:
+        dest=destpath_ca+'\\'+row['file']
+        copyfile(origfile, dest)
+        
+

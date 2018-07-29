@@ -1,0 +1,53 @@
+import xml.etree.cElementTree as ET
+from xml.etree.cElementTree import XML
+import datetime
+
+tree=ET.parse('filepath\georgianliverpool.xml') 
+root=tree.getroot()
+
+for child in root.iter('a'):
+  #extracts the elements with attribute href    
+  use=child.attrib['href']
+  #splits the string on the slash and extracts the last element which is the list id we want
+  use=use.rsplit('/', 1)[1]
+  #opens textfile
+  p = open('filepath\\georgiantested.txt', "a")
+  #writes to textfile
+  p.write(use+'\n')
+p.close()        
+
+''' Example xml that was parses
+ <section>
+            <h2>Search Results</h2>
+                <article class="searchResultItem">
+                    <h3><a href="/listing/the-list/list-entry/1025131">128 AND 130, BEDFORD STREET SOUTH, 64 AND 66, FALKNER STREET, LIVERPOOL</a></h3>
+                    <ul>
+                        <li><span class="resultListItemTitle">List Entry Number: </span>1025131</li>
+                        <li><span class="resultListItemTitle">Heritage Category: </span>Listing</li>
+                        
+                            <li><span class="resultListItemTitle">Grade: </span>II</li>
+                        <li>
+                            <span class="resultListItemTitle">Location: </span>
+
+                            128 AND 130, BEDFORD STREET SOUTH,64 AND 66, FALKNER STREET, LIVERPOOL, Liverpool
+                        </li>
+
+                    </ul>
+                </article>
+                <article class="searchResultItem">
+                    <h3><a href="/listing/the-list/list-entry/1025238">28 AND 30, FALKNER STREET, LIVERPOOL</a></h3>
+                    <ul>
+                        <li><span class="resultListItemTitle">List Entry Number: </span>1025238</li>
+                        <li><span class="resultListItemTitle">Heritage Category: </span>Listing</li>
+                        
+                            <li><span class="resultListItemTitle">Grade: </span>II</li>
+                        <li>
+                            <span class="resultListItemTitle">Location: </span>
+
+                            28 AND 30, FALKNER STREET, LIVERPOOL, Liverpool
+                        </li>
+
+                    </ul>
+                </article>
+                </section
+                '''

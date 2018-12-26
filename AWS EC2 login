@@ -1,0 +1,24 @@
+
+1. Select and launch an EC2 instance
+   You are prompted to select an existing key pair or create a new one
+
+2. If no previous key pair exists create a new one and download the file with the .pem ending e.g. file.pem
+
+3. Move the key pair to the project folder
+   cd /mnt/c/users/Name/Downloads  # cd to Downloads folder
+   $ mv file.pem /home/projectfolder/  #Move the key pair file to the project folder
+  
+4. Change the permissions on the .pem file 
+   cd projectfolder  # cd to the project folder
+   $ chmod 400 file.pem    # Change the permissions on the pem file from -rwxrwxrwx  to  -r--------  Visisble with ls -l
+   
+5. Logging into the EC2 instance
+   Select the DNS information from the instance page, it looks like ec2-y-yy-yy-yyy.compute-1.amazonaws.com Where the ys are numnbers, then
+   $ ssh -i file.pem  ec2-user@XXXXXX  # Where the XXXXXX is replaced by the DNS information from the instance page
+   
+6. The terminal will prompt with
+   'Are you sure you want to continue connecting (yes/no)?' 
+     Say yes and you will log into the remote EC2 machine. The command line has the form
+     
+     [ec2-user@ip-x-x-x ~]$
+   

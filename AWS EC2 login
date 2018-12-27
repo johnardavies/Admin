@@ -21,4 +21,15 @@
      Say yes and you will log into the remote EC2 machine. The command line has the form
      
      [ec2-user@ip-x-x-x ~]$
+     
+     
+#### If a Jupyter notebook is set up, to run this
+
+cd to the relevant folder in AWS, then run
+
+$ jupyter notebook
    
+and the notebook will show at  https://xxxxxx:portnumber where xxxxxx is replaced by the DNS and the portnumber by that used when setting 
+Jupyter up
+
+if the pages does not load change the security settings to allow the portnumber as an output

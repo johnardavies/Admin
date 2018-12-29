@@ -33,3 +33,6 @@ and the notebook will show at  https://xxxxxx:portnumber where xxxxxx is replace
 Jupyter up
 
 if the pages does not load change the security settings to allow the portnumber as an output
+
+Custom TCP Rule, TCP, portno
+

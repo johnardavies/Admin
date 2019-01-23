@@ -1,5 +1,5 @@
 
-#Copy from file
+#Copy from file on home computer to s3 'folder'
 $ aws s3 cp 'filepath to file A1 on home computer to s3' s3://folder
 
 #List files in folder

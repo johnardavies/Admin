@@ -9,3 +9,7 @@ $ aws s3 ls folder
 #Delete the file
 
 aws s3 rm s3://folder/A1
+
+#Make a bucket
+
+aws s3 mb s3://bucketname

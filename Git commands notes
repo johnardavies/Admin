@@ -1,0 +1,15 @@
+
+# within the repo initalise git
+$ git init
+
+# adds modified and new files to the index prior to committing
+$ git add .
+
+# commits changes that have been made, in this case called test commit
+$ git commit -m "test commit"
+
+# produces a record of commits
+$ git log
+
+#pushes changes to online repo where origin is the repo name and master is the branch name
+$ git push origin master

@@ -8,11 +8,19 @@ $ git add .
 # commits changes that have been made, in this case called test commit
 $ git commit -m "test commit"
 
+# combines the add add and the commit command into one 
+$ git commit -a -m "test commit"
+
 # produces a record of commits
 $ git log
 
-#Reverts the commit with index ndexofcommit
+#Reverts the commit with index indexofcommit
 $ git revert indexofcommit
 
 #pushes changes to online repo where origin is the repo name and master is the branch name
 $ git push origin master
+
+# Merges remote changes with local changes
+$ git pull origin master
+
+

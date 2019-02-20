@@ -14,7 +14,6 @@ $ git commit -a -m "test commit"
 # produces a record of commits, type q to exit
 $ git log
 
-
 #Reverts the commit with index indexofcommit
 $ git revert indexofcommit
 
@@ -23,6 +22,9 @@ $ git branch new_branch
 
 # switch to working on the new branch
 $ git checkout new_branch
+
+#switch back to the master branch
+$ git checkout -
 
 #pushes changes to online repo where origin is the repo name and master is the branch name
 $ git push origin master

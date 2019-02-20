@@ -11,8 +11,9 @@ $ git commit -m "test commit"
 # combines the add and the commit command in one line
 $ git commit -a -m "test commit"
 
-# produces a record of commits
+# produces a record of commits, type q to exit
 $ git log
+
 
 #Reverts the commit with index indexofcommit
 $ git revert indexofcommit

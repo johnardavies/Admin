@@ -11,6 +11,12 @@ $ git commit -m "test commit"
 # combines the add and the commit command in one line
 $ git commit -a -m "test commit"
 
+# Removes uncommited changes to a 'stash'
+$ git stash
+
+# Removes the changes from the stash and applies them to branch you are working on
+$ git stash pop
+
 # produces a record of commits, type q to exit
 $ git log
 

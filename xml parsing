@@ -16,7 +16,7 @@ for child in root.iter('a'):
   p.write(use+'\n')
 p.close()        
 
-''' Example xml that was parses
+''' Example xml that was parsed
  <section>
             <h2>Search Results</h2>
                 <article class="searchResultItem">

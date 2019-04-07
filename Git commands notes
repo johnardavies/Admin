@@ -11,6 +11,9 @@ $ git commit -m "test commit"
 # combines the add and the commit command in one line
 $ git commit -a -m "test commit"
 
+# pulls the latest version from the remote repo if run from local repo
+$ git pull
+
 # Removes uncommited changes to a 'stash'
 $ git stash
 

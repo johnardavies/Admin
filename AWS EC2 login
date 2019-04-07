@@ -32,7 +32,7 @@ $ jupyter notebook
 and the notebook will show at  https://xxxxxx:portnumber where xxxxxx is replaced by the DNS and the portnumber by that used when setting 
 Jupyter up
 
-if the pages does not load change the security settings to allow the portnumber as an output
+if the pages does not load change the security settings to allow the portnumber as an inbound rule
 
 Custom TCP Rule, TCP, portno
 

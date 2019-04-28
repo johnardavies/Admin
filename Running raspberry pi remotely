@@ -60,4 +60,4 @@ The usb drive may need to be set up on the pi for this to work
 
 $ scp pi@ip_address:/media/usb/store.db   /mnt/c/Users/filepath_for_database/store.db
 
-This will send a copy of the database from the pi back to the home computer
+This run from the command line of the home machine will send a copy of the database from the pi back to the home computer

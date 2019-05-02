@@ -26,6 +26,9 @@ $ git log
 #Reverts the commit with index indexofcommit
 $ git revert indexofcommit
 
+#Rolls back local changes, but does not remove the last commit
+$ git reset --hard
+
 # branches the repo into a new branch
 $ git branch new_branch
 

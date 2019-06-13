@@ -29,7 +29,7 @@ $ git revert indexofcommit
 # Rolls back local changes, but does not remove the last commit
 $ git reset --hard
 
-# Undoes uncommited changes to a file
+# Undoes uncommited changes to a file permanently
 git checkout -- file
 
 # branches the repo into a new branch

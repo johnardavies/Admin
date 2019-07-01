@@ -21,3 +21,8 @@ local_machine:~$ ssh-agent $SHELL
 local_machine:~$ ssh-add  #Prompts for the password of the SSH key that you want to add
 local_machine:~$ ssh-agent $ ssh-add -L #Checks it has been added
 
+
+#API call returned in nicely formatted json
+
+$ curl -s http_request | jq '.'
+

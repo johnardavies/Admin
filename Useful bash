@@ -1,0 +1,23 @@
+# copies all the files in one folder with a .doc extension to a new directory labelled backup
+$ cp *.doc /filepath/backup
+
+
+#Changing file permissions for a file
+$ chmod (user|group|other) file
+add the numbers below to get permissions
+4 stands for "read", 2 stands for "write",1 stands for "execute", and 0 stands for "no permission
+e.g. chmod 700 file gives read, write, execute for the user. No permissions for anyone else
+
+
+#unzip a compressed .gz file
+$ gunzip archive.gz 
+
+#Backs up the text file text.txt to the pi external drive. -avz stands for archive (a), verbose (v), z (compress)
+rsync -avz text.txt pi@ip_address:/mnt/my_external_drive
+
+
+#Sets up a key for passwordless login (The public key having already been installed on a remote machine with ssh-copy-id)
+local_machine:~$ ssh-agent $SHELL
+local_machine:~$ ssh-add  #Prompts for the password of the SSH key that you want to add
+local_machine:~$ ssh-agent $ ssh-add -L #Checks it has been added
+

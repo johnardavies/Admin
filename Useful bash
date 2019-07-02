@@ -9,8 +9,18 @@ add the numbers below to get permissions
 e.g. chmod 700 file gives read, write, execute for the user. No permissions for anyone else
 
 
+# Accessing the cron tab to edit the jobs
+$ crontab -e
+# Cronjob
+$ ***** /path/to/script.sh   #This version runs every minute
+ Minute, Hour, Day of Month, Month of Year, Day of week
+# List cronjobs
+$ crontab -l
+
+
 #unzip a compressed .gz file
 $ gunzip archive.gz 
+
 
 #Backs up the text file text.txt to the pi external drive. -avz stands for archive (a), verbose (v), z (compress)
 rsync -avz text.txt pi@ip_address:/mnt/my_external_drive

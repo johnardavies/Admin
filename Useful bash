@@ -21,6 +21,8 @@ $ crontab -l
 #unzip a compressed .gz file
 $ gunzip archive.gz 
 
+#unzip a Winzip file 
+$ unzip file.zip
 
 #Backs up the text file text.txt to the pi external drive. -avz stands for archive (a), verbose (v), z (compress)
 rsync -avz text.txt pi@ip_address:/mnt/my_external_drive

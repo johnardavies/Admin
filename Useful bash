@@ -1,5 +1,5 @@
 # list file info in date order 
-ls -lr
+$ ls -lr
 
 
 # copies all the files in one folder with a .doc extension to a new directory labelled backup

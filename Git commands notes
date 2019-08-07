@@ -48,5 +48,8 @@ $ git push origin master
 # Merges remote changes with local changes
 $ git pull origin master
 
+#Checks which online repos the local repo is linked with
+git remote -v
+
 # Changes the url of the remote repo that the local copy is linked to
 git remote set-url origin new.git.url/here

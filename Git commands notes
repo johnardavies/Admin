@@ -14,14 +14,10 @@ $ git commit -a -m "test commit"
 # pulls the latest version from the remote repo if run from local repo
 $ git pull
 
-# Removes uncommited changes to a 'stash'
-$ git stash
-
-# Removes the changes from the stash and applies them to branch you are working on
-$ git stash pop
-
 # produces a record of commits, type q to exit
 $ git log
+
+##################### Undoes changes you have made and what to disgard
 
 #Reverts the commit with index indexofcommit
 $ git revert indexofcommit
@@ -31,6 +27,15 @@ $ git reset --hard
 
 # Undoes uncommited changes to a file permanently
 git checkout -- file
+
+#### Stashing
+# Removes uncommited changes to a 'stash'
+$ git stash
+
+# Removes the changes from the stash and applies them to branch you are working on
+$ git stash pop
+
+###################### Which branch is being worked on
 
 # branches the repo into a new branch
 $ git branch new_branch
@@ -47,6 +52,8 @@ $ git push origin master
 
 # Merges remote changes with local changes
 $ git pull origin master
+
+###################### Which online repo the local repo is linked to 
 
 #Checks which online repos the local repo is linked with
 git remote -v

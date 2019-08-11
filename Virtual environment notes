@@ -1,0 +1,29 @@
+#In conadas
+
+# Creates a virtual environment envname for a given version (x.x) of python
+> conda create -n envname python=x.x anaconda
+
+# List the existing environments
+> conda info --envs
+
+# Activates the environment envname
+
+> conda activate envname
+
+# Launch Jupyter notebook within activated environment (assuming it's already installed)
+(envname) > jupyter notebook
+
+# Deactivate the environment
+> conda deactivate
+
+
+#In bash
+
+#Creates a virtual environment envname in Python 3
+$ python3 -m envname env
+
+# activates the environment envname
+$ source envname/bin/activate
+
+# Deactivate the environmne
+$ deactivate

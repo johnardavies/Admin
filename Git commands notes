@@ -17,7 +17,7 @@ $ git pull
 # produces a record of commits, type q to exit
 $ git log
 
-##################### Undoes changes you have made and what to disgard
+##################### Undoing changes you have made
 
 #Reverts the commit with index indexofcommit
 $ git revert indexofcommit

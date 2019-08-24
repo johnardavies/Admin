@@ -35,7 +35,8 @@ rsync -avz text.txt pi@ip_address:/mnt/my_external_drive
 #Sets up a key for passwordless login (The public key having already been installed on a remote machine with ssh-copy-id)
 local_machine:~$ ssh-agent $SHELL
 local_machine:~$ ssh-add  #Prompts for the password of the SSH key that you want to add
-local_machine:~$ ssh-agent $ ssh-add -L #Checks it has been added
+local_machine:~$ ssh-agent 
+local_machine:~$ ssh-add -L #Checks it has been added
 
 
 #API call returned in nicely formatted json

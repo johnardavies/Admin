@@ -1,5 +1,5 @@
 # list file info in date order 
-$ ls -lr
+$ ls -lt
 
 
 # copies all the files in one folder with a .doc extension to a new directory labelled backup
@@ -42,6 +42,10 @@ local_machine:~$ ssh-add -L #Checks it has been added
 #API call returned in nicely formatted json
 
 $ curl -s http_request | jq '.'
+
+
+# Remove blank lines from a file
+$ sed '/^$/d'  file.txt >  file_noblanks.txt
 
 
 # Writing an openstreetmap query to a separate file query.osm and running it from the command line  

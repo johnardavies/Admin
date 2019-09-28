@@ -53,6 +53,9 @@ $ git push origin master
 # Merges remote changes with local changes
 $ git pull origin master
 
+# Selects specific commits e.g. commit1  commit2 from another branch and applies it to the branch you're on
+$ git cherry-pick commit1  commit2
+
 ###################### Which online repo the local repo is linked to 
 
 #Checks which online repos the local repo is linked with

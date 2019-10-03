@@ -24,6 +24,9 @@ $ crontab -l
 #unzip a compressed .gz file
 $ gunzip archive.gz 
 
+#unzip a tar file
+$ tar -xvf file.tar
+
 #unzip a Winzip file 
 $ unzip file.zip (To unzip all files in a folder $ unzip "*.zip" )
 

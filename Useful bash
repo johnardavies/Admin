@@ -21,12 +21,14 @@ $ ***** /path/to/script.sh   #This version runs every minute
 # List cronjobs
 $ crontab -l
 
-
 #unzip a compressed .gz file
 $ gunzip archive.gz 
 
 #unzip a Winzip file 
 $ unzip file.zip (To unzip all files in a folder $ unzip "*.zip" )
+
+#encrypt a file with gpg
+ gpg -e -r username file
 
 #Backs up the text file text.txt to the pi external drive. -avz stands for archive (a), verbose (v), z (compress)
 rsync -avz text.txt pi@ip_address:/mnt/my_external_drive

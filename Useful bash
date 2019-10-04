@@ -34,7 +34,7 @@ $ unzip file.zip (To unzip all files in a folder $ unzip "*.zip" )
 $ gpg -e -r username file
  
 #and decrypt
-$ gpg [-o outputfile] encryptedfile
+$ gpg -o outputfile encryptedfile
 
 #Backs up the text file text.txt to the pi external drive. -avz stands for archive (a), verbose (v), z (compress)
 rsync -avz text.txt pi@ip_address:/mnt/my_external_drive

@@ -39,6 +39,9 @@ $ gpg -o outputfile encryptedfile
 #Backs up the text file text.txt to the pi external drive. -avz stands for archive (a), verbose (v), z (compress)
 rsync -avz text.txt pi@ip_address:/mnt/my_external_drive
 
+#Updating additions to data folder in opencloud from the command line
+$ sudo -u www-data php occ files:scan --all
+
 
 #Sets up a key for passwordless login (The public key having already been installed on a remote machine with ssh-copy-id)
 local_machine:~$ ssh-agent $SHELL

@@ -17,6 +17,9 @@ $ git pull
 # produces a record of commits, type q to exit
 $ git log
 
+# shows files in last commit 
+$ git diff-tree --name-only -r indexofcommit
+
 ##################### Undoing changes you have made
 
 #Reverts the commit with index indexofcommit

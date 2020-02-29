@@ -20,7 +20,11 @@ $ git log
 # shows files in last commit 
 $ git diff-tree --name-only -r indexofcommit
 
-##################### Undoing changes you have made
+##################### Undoing/Amending changes you have made
+
+# Gives the opportunity to revise the last commit message or if you need to
+# make further changes incorporate them into an updated version of the last commit
+$ git commit --amend
 
 #Reverts the commit with index indexofcommit
 $ git revert indexofcommit

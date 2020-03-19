@@ -1,10 +1,8 @@
 # list file info in date order 
 $ ls -lt
 
-
 # copies all the files in one folder with a .doc extension to a new directory labelled backup
 $ cp *.doc /filepath/backup
-
 
 #Changing file permissions for a file
 $ chmod (user|group|other) file
@@ -12,6 +10,8 @@ add the numbers below to get permissions
 4 stands for "read", 2 stands for "write",1 stands for "execute", and 0 stands for "no permission
 e.g. chmod 700 file gives read, write, execute for the user. No permissions for anyone else
 
+#Gets the 10 largest files sorted by size (du -h gives disk usage -h tag for readable format) (sort-nr tags is numeric reverse order)
+ du -h | sort -nr | head -n 10
 
 # Accessing the cron tab to edit the jobs
 $ crontab -e

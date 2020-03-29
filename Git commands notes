@@ -20,6 +20,9 @@ $ git log
 # shows files in last commit 
 $ git diff-tree --name-only -r indexofcommit
 
+# Lists the files that are being tracked in the master branch
+$ git ls-tree -r master --name-only
+
 ##################### Undoing/Amending changes you have made
 
 # Gives the opportunity to revise the last commit message or if you need to

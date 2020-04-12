@@ -47,6 +47,9 @@ $ git stash pop
 
 ###################### Which branch is being worked on
 
+# lists the branches and which one is being worked on
+$ git branch
+
 # branches the repo into a new branch
 $ git branch new_branch
 

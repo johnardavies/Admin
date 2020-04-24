@@ -62,11 +62,20 @@ $ sed '/^$/d'  file.txt >  file_noblanks.txt
 echo "data=node[name=\"Gielgen\"];out;" >query.osm
 wget -O target.osm --post-file=query.osm "http://overpass-api.de/api/interpreter"
 
-
 # Copies a zipped music file that you have just downloaded to the music folder and unzips
 $ cd "/c/users/user_name/downloads"
 $ latest_album=$(ls -Art | tail -n 1)
 $ mv $latest_album /c/users/user_name/music
 $ cd /c/users/user_name/music
 $ unzip $latest_album
+
+# Command line to inspect sqlite database
+$ sqlite3 database.db
+sqlite> .tables    # List the tables in the database
+sqlite> .mode line  # Viewing mode, others are column and list
+sqlite> select * from table ; # selects the data in a table
+
+
+
+
 

@@ -19,7 +19,7 @@ $ for file in dir/*; do file "$file" | cut -d: -f 2; done | sort -u
 # Accessing the cron tab to edit the jobs
 $ crontab -e
 # Cronjob
-$ ***** /path/to/script.sh   #This version runs every minute
+ ***** /path/to/script.sh   #This version runs every minute
  Minute, Hour, Day of Month, Month of Year, Day of week
 # List cronjobs
 $ crontab -l
@@ -63,7 +63,7 @@ echo "data=node[name=\"Gielgen\"];out;" >query.osm
 wget -O target.osm --post-file=query.osm "http://overpass-api.de/api/interpreter"
 
 # Copies a zipped music file that you have just downloaded to the music folder and unzips
-$ cd "/c/users/user_name/downloads"
+$ cd /c/users/user_name/downloads
 $ latest_album=$(ls -Art | tail -n 1)
 $ mv $latest_album /c/users/user_name/music
 $ cd /c/users/user_name/music

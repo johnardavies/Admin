@@ -75,6 +75,13 @@ sqlite> .tables    # List the tables in the database
 sqlite> .mode line  # Viewing mode, others are column and list
 sqlite> select * from table ; # selects the data in a table
 
+# Most recent log data 
+$ tail /var/log/auth.log
+
+# Failed password logins
+$ grep "Failed password" /var/log/auth.log
+
+
 
 
 

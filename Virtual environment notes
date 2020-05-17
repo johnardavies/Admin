@@ -17,10 +17,10 @@
 > conda deactivate
 
 
-#In bash (after installing using $ sudo pip install virtualenv)
+#In bash (after installing using $ sudo -H pip install virtualenv)
 
 #Creates a virtual environment envname in Python 3
-$ python3 -m envname env
+$ python3 -m  virtualenv envname 
 
 # activates the environment envname
 $ source envname/bin/activate

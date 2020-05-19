@@ -16,7 +16,7 @@ $ du -h | sort -nr | head -n 10
 #Lists the file types in a directory labelled dir. Loops through file names, gets the 2nd field and sorts for unique file types
 $ for file in dir/*; do file "$file" | cut -d: -f 2; done | sort -u
 
-# Find the location of all files in a directory with a certain extension. In this case txt files
+# Find the location of all files in the current directory (indicated by . prefix) with a certain extension. In this case txt files
 $ find . -type f -name "*.txt"
 
 # Accessing the cron tab to edit the jobs

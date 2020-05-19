@@ -13,8 +13,11 @@ e.g. chmod 700 file gives read, write, execute for the user. No permissions for 
 #Gets the 10 largest files sorted by size (du -h gives disk usage -h tag for readable format) (sort-nr tags is numeric reverse order)
 $ du -h | sort -nr | head -n 10
 
-Lists the file types in a directory labelled dir. Loops through file names, gets the 2nd field and sorts for unique file types
+#Lists the file types in a directory labelled dir. Loops through file names, gets the 2nd field and sorts for unique file types
 $ for file in dir/*; do file "$file" | cut -d: -f 2; done | sort -u
+
+# Find the location of all files in a directory with a certain extension. In this case txt files
+$ find . -type f -name "*.txt"
 
 # Accessing the cron tab to edit the jobs
 $ crontab -e

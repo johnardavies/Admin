@@ -60,6 +60,8 @@ $ curl -s http_request | jq '.'
 # Remove blank lines from a file
 $ sed '/^$/d'  file.txt >  file_noblanks.txt
 
+# Extracting text from pdf files in a folder (requires sudo apt install poppler-utils and sudo apt install calibre)
+$ for file in *.pdf; do pdftotext -layout "$file"; done
 
 # Writing an openstreetmap query to a separate file query.osm and running it from the command line  
 echo "data=node[name=\"Gielgen\"];out;" >query.osm

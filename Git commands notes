@@ -29,6 +29,9 @@ $ git ls-tree -r master --name-only
 # make further changes incorporate them into an updated version of the last commit
 $ git commit --amend
 
+#Change the commit message of the last commit that has not yet been pushed
+$ git commit --amend -m "New commit message."
+
 #Reverts the commit with index indexofcommit
 $ git revert indexofcommit
 

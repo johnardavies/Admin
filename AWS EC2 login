@@ -16,6 +16,8 @@
    Select the DNS information from the instance page, it looks like ec2-y-yy-yy-yyy.compute-1.amazonaws.com Where the ys are numnbers, then
    $ ssh -i file.pem  ec2-user@XXXXXX  # Where the XXXXXX is replaced by the DNS information from the instance page
    
+   #! Don't forget to check the prefix it is ec2-user@ here as this example is Amazon linux, but it varies according to type for Ubuntu it would be ubuntu 
+   
 6. The terminal will prompt with
    'Are you sure you want to continue connecting (yes/no)?' 
      Say yes and you will log into the remote EC2 machine. The command line has the form

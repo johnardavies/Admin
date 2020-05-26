@@ -22,6 +22,10 @@ $ for file in dir/*; do file "$file" | cut -d: -f 2; done | sort -u
 # Find the location of all files in the current directory (indicated by . prefix) with a certain extension. In this case txt files
 $ find . -type f -name "*.txt"
 
+# Counts the number of text files in a folder that contain a given word - in this example "test".
+# -i makes the grep case insensitive, -l makes the grep output filenames only. This is then piped to wc -l where the -l gives line count
+$ grep -i -l "test" folder_location/*.txt |  wc -l
+
 # Accessing the cron tab to edit the jobs
 $ crontab -e
 # Cronjob

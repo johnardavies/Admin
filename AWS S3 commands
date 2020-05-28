@@ -1,15 +1,33 @@
-
-#Copy from file on home computer to s3 'folder'
-$ aws s3 cp 'filepath to file A1 on home computer to s3' s3://folder
-
-#List files in folder
-
-$ aws s3 ls folder
-
-#Delete the file
-
-aws s3 rm s3://folder/A1
+###################### Commands to access s3 buckets using aws cli ################################################
 
 #Make a bucket
 
-aws s3 mb s3://bucketname
+$ aws s3 mb s3://bucket_name
+
+#List files in a bucket
+
+$ aws s3 ls bucket_name
+
+#Copy file on home computer to s3 bucket
+
+$ aws s3 cp 'filepath to file A1 on home computer to s3' s3://bucket_name
+
+# Copies all the files in a bucket to the present working directory
+
+aws s3 cp s3://bucket_name ./ --recursive
+
+#Delete the file A1 in the bucket
+
+$ aws s3 rm s3://bucket_name/A1
+
+# Sync new or updated files in a the current working directory to a bucket
+
+$ aws s3 sync . s3://bucket_name
+
+# sync Uploads all the files in a bucket that are new or modified
+
+$ aws s3 sync . s3://bucket_name
+ 
+# Upload the files in folder to an s3 bucket
+
+$ aws s3 sync . s3://bucket_name

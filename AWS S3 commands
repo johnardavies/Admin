@@ -20,14 +20,8 @@ aws s3 cp s3://bucket_name ./ --recursive
 
 $ aws s3 rm s3://bucket_name/A1
 
-# Sync new or updated files in a the current working directory to a bucket
-
-$ aws s3 sync . s3://bucket_name
-
 # sync Uploads all the files in a bucket that are new or modified
 
 $ aws s3 sync . s3://bucket_name
  
-# Upload the files in folder to an s3 bucket
 
-$ aws s3 sync . s3://bucket_name

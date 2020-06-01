@@ -51,8 +51,12 @@ $ crontab -e
 # Cronjob
  ***** /path/to/script.sh   #This version runs every minute
  Minute, Hour, Day of Month, Month of Year, Day of week
+ 
 # List cronjobs
 $ crontab -l
+
+# Check when the jobs have been run by searching syslog
+$ grep CRON /var/log/syslog
 
 ############ Zipping and Unzipping files ################################################################################################
 

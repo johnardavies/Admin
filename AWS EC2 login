@@ -38,3 +38,11 @@ if the pages does not load change the security settings to allow the portnumber 
 
 Custom TCP Rule, TCP, portno
 
+
+
+################################################################################################################################
+
+#Copying a folder from home machine to ubuntu cloud machine -r not needed if copying a file
+
+$ scp -r -i keypair.pem   /c/users/sss/folder ubuntu@ec2-xx-xxx-xxx-xxx.eu-west-2.compute.amazonaws.com:folder_location
+

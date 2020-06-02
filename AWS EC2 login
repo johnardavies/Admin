@@ -41,7 +41,7 @@ Custom TCP Rule, TCP, portno
 
 
 ################################################################################################################################
-
+######### Transferring data to and from instances
 #Copying a folder from home machine to ubuntu cloud machine -r not needed if copying a file
 
 $ scp -r -i keypair.pem   /c/users/sss/folder  ubuntu@ec2-xx-xxx-xxx-xxx.eu-west-2.compute.amazonaws.com:folder_location
@@ -50,3 +50,15 @@ $ scp -r -i keypair.pem         source                            target
 #The order reverses to copy a folder from cloud to local e.g.
 
 $ scp -r -i key_pair.pem ubuntu@ec2-xx-xxx-xxx-xxx.eu-west-2.compute.amazonaws.com:~/folder_in_home_directory/ /c/users/xxxx/documents/target_folder
+
+##################################################################################################################################
+########### Listing, starting and stopping instances
+
+#lists the ec2 instances
+$ aws ec2 describe-instances
+
+# example of launching ec2 from command line
+$ aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e
+
+#and stopping instances
+$ aws ec2 stop-instances --instance-ids i-1234567890abcdef0

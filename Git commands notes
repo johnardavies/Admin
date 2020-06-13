@@ -38,6 +38,9 @@ $ git revert indexofcommit
 # Rolls back local changes, but does not remove the last commit
 $ git reset --hard
 
+# Go back to the state after a past commit with commit has abcd1
+$ git checkout abcd1
+
 # Undoes uncommited changes to a file permanently
 git checkout -- file
 

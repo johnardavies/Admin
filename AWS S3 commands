@@ -8,7 +8,7 @@ $ aws s3 mb s3://bucket_name
 
 $ aws s3 ls bucket_name
 
-#Copy file on home computer to s3 bucket
+#Copy file on home computer to s3 bucket (if the copy item is not a file, but a folder and --recursive to copy all the files in a folder)
 
 $ aws s3 cp 'filepath to file A1 on home computer to s3' s3://bucket_name
 
@@ -23,5 +23,9 @@ $ aws s3 rm s3://bucket_name/A1
 # sync Uploads all the files in a folder that are new or modified to an s3 bucket
 
 $ aws s3 sync . s3://bucket_name
+
+# Moves files (in this case jpegs) to a folder 'summer_holiday' inside a bucket called photos
+
+$ aws s3 mv s3://photos/   s3://photos/summer_holiday --recursive --exclude "*" --include "*.jpg"
  
 

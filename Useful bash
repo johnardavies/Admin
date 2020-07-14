@@ -22,6 +22,9 @@ $ find . -type f -name "*.txt"
 # -i makes the grep case insensitive, -l makes the grep output filenames only. This is then piped to wc -l where the -l gives line count
 $ grep -i -l "test" folder_location/*.txt |  wc -l
 
+# To look at a large file, type q to exit
+$  less file 
+
 ########## Moving files #################################################################################################################
 
 # copies all the files in one folder with a .doc extension to a new directory labelled backup

@@ -110,9 +110,12 @@ $ curl -s http_request | jq '.'
 #Updating additions to data folder in opencloud from the command line
 $ sudo -u www-data php occ files:scan --all
 
+#Resetting the password of a dockerised nextcloud installation for the user The_user_name. The nextcloud container id is found by running $ docker ps
+$ docker exec -it docker_container_id  sudo -u abc php /config/www/nextcloud/occ user:resetpassword The_user_name
+
 # Writing an openstreetmap query to a separate file query.osm and running it from the command line  
-echo "data=node[name=\"Gielgen\"];out;" >query.osm
-wget -O target.osm --post-file=query.osm "http://overpass-api.de/api/interpreter"
+$ echo "data=node[name=\"Gielgen\"];out;" >query.osm
+$ wget -O target.osm --post-file=query.osm "http://overpass-api.de/api/interpreter"
 
 # Command line to inspect sqlite database
 $ sqlite3 database.db

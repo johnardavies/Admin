@@ -131,6 +131,21 @@ $ tail /var/log/auth.log
 # Failed password logins
 $ grep "Failed password" /var/log/auth.log
 
+########### Splitting terminal screen to run two sessions with tmux ######################################
+# To get started
+$ tmux  
+
+# To split the screen vertically
+Type Ctrl and b at the same time, then type %
+
+# To move betwween the screens 
+Type Ctrl and b at the same time, and then the arrow key in the direction of the screen you want to move to
+
+# To close a screen
+Type exit or Ctrl and d (If you exit all the screens you will exit tmux
+
+
+
 
 
 

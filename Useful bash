@@ -144,6 +144,14 @@ Type Ctrl and b at the same time, and then the arrow key in the direction of the
 # To close a screen
 Type exit or Ctrl and d (If you exit all the screens you will exit tmux
 
+########### Mounting a new drive ###################################################################################################
+# Create a directory for drive D and mount the drive to directory
+$ sudo mkdir /mnt/d
+$ sudo mount -t drvfs D: /mnt/d
+
+# and then to access
+$ cd /mnt/d && ls
+
 
 
 

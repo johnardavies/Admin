@@ -62,3 +62,41 @@ $ aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.mic
 
 #and stopping instances
 $ aws ec2 stop-instances --instance-ids i-1234567890abcdef0
+
+
+
+###################################################################################################################################
+# Setting up jupyter notebook certificate on an ubuntu ec2
+
+#Create an ssl directory
+$ mkdir ssl
+$ cd ssl
+
+#Create a certificate
+$ openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout "cert.key" -out "cert.pem" -batch
+
+# Create a jupyter notebook config file
+$ jupyter notebook --generate-config
+
+#Start Ipython shell
+$ ipython  # Then in the shell run
+from IPython.lib import passwd
+passwd()  # This will prompt for a password and return a hash
+exit 
+
+#Edit the jupyter config file
+$ nano ~/.jupyter/jupyter_notebook_config.py
+#and paste the following at the start of the file 
+
+c=get_config()
+c.NotebookApp.certfile=u'/home/ubuntu/ssl/cert.pem'
+c.NotebookApp.keyfile=u'/home/ubuntu/ssl/cert.key'    
+c.IPKernelApp.pylab='inline'
+c.NotebookApp.ip='*'                                                                                                                                                       
+c.NotebookApp.open_browser=False
+c.NotebookApp.password='The hash that was generated earlier'
+
+
+
+
+

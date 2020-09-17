@@ -13,10 +13,19 @@
 # Launch Jupyter notebook within activated environment (assuming it's already installed)
 (envname) > jupyter notebook
 
+# List the packages in the environment
+> conda list
+
+# List revisions to the packages
+> conda list --revisions
+
+# Revert to an earlier version xx of the environment
+> conda install --revision xx
+
 # Deactivate the environment
 > conda deactivate
 
-
+####################################################################
 #In bash (after installing using $ sudo -H pip install virtualenv)
 
 #Creates a virtual environment envname in Python 3

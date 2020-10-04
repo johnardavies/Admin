@@ -107,6 +107,9 @@ $ curl -s http_request | jq '.'
 
 ######## Some programme specific commands #############################################################################################
 
+# Creates a 50 by 50 sprite image from the jpegs in a folder the command is run in, requires ImageMagick to be installed
+$ montage "*.jpg" -tile 50x50 -geometry 50x50! sprite.jpg
+
 #Updating additions to data folder in opencloud from the command line
 $ sudo -u www-data php occ files:scan --all
 

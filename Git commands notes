@@ -23,6 +23,9 @@ $ git diff-tree --name-only -r indexofcommit
 # Lists the files that are being tracked in the master branch
 $ git ls-tree -r master --name-only
 
+# Searches the git history
+$ git grep <regexp> $(git rev-list --all) # git rev-list --all lists all the commit objects in reverse chronological order (The commit hashes)
+
 ##################### Undoing/Amending changes you have made
 
 # Gives the opportunity to revise the last commit message or if you need to
@@ -43,9 +46,6 @@ $ git checkout abcd1
 
 # Undoes uncommited changes to a file permanently
 git checkout -- file
-
-# Searches the git history
-$ git grep <regexp> $(git rev-list --all) # git rev-list --all lists all the commit objects in reverse chronological order (The commit hashes)
 
 #### Stashing
 # Removes uncommited changes to a 'stash'

@@ -36,3 +36,14 @@ $ source envname/bin/activate
 
 # Deactivate the environmne
 $ deactivate
+
+#####################################################################
+# Saving the requirements and later installing them
+
+# Saving the requirements, the below generates a requirements file
+$ pip freeze > requirements.txt 
+
+# install the requirements
+$ pip install -r requirements.txt
+
+

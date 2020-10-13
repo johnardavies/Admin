@@ -25,6 +25,9 @@
 # Deactivate the environment
 > conda deactivate
 
+# Delete the environment
+> conda env remove --name env_to_remove 
+
 ####################################################################
 #In bash (after installing using $ sudo -H pip install virtualenv)
 

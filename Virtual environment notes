@@ -1,4 +1,4 @@
-#In conadas
+#In condas
 
 # Creates a virtual environment envname for a given version (x.x) of python
 > conda create -n envname python=x.x anaconda

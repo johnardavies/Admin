@@ -86,6 +86,8 @@ $ git remote -v
 # Changes the url of the remote repo that the local copy is linked to
 $ git remote set-url origin new.git.url/here
 
+################## Merges the git commit history of two previously unrelated projects, pulling the master branch from the remote origin that has been set up to the local repo
+git pull origin master --allow-unrelated-histories
 
 ##################### Removing a folder and its contents from git history (use carefully) --ignore-unmatch means it doesn't throw an error if no match -r deletes contents
 $  git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch filepath/folder' HEAD

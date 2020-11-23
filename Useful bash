@@ -158,8 +158,15 @@ $ sudo mount -t drvfs D: /mnt/d
 # and then to access
 $ cd /mnt/d && ls
 
+########### Cleaning up memory #################################################################################
+# Clean the cache
+$ sudo apt-get clean
 
+# Remove unused dependencies
+$ sudo apt-get autoremove -y
 
+# Finds files taking up a lot of space, pipes the disc usage tool to grep, gets the gigabyte "G" size files
+$ sudo du -xh / | grep -P "G\t"
 
 
 

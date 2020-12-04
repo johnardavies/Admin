@@ -25,6 +25,9 @@ $ find Folder | grep "file_name"
 # -i makes the grep case insensitive, -l makes the grep output filenames only. This is then piped to wc -l where the -l gives line count
 $ grep -i -l "test" folder_location/*.txt |  wc -l
 
+# Getting the names of text files .txt in a folder that contain a word e.g. covid. ggrep on mac seems to work better than grep
+$ ggrep -i -l -r --include="*.txt" "Covid" folder_file_path
+
 # To look at a large file, type q to exit
 $  less file 
 

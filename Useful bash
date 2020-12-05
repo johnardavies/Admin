@@ -36,9 +36,8 @@ $  less file
 # copies all the files in one folder with a .doc extension to a new directory labelled backup
 $ cp *.doc /filepath/backup
 
-$ copies the results from a grep search of text files to a new directory using ` ` to pass to cp
-
-cp `ggrep -i -l  -r  --include="*.txt" "Liverpool"` filepath_for_where_files_are_to_go
+# copies the results from a grep search of text files for a word (Liverpool in this exampl) to a new directory using ` ` to pass to cp
+$ cp `ggrep -i -l  -r  --include="*.txt" "Liverpool"` filepath_for_where_files_are_to_go
 
 ############ Changing files #############################################################################################################
 

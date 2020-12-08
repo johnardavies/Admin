@@ -3,6 +3,9 @@
 # Creates a virtual environment envname for a given version (x.x) of python
 > conda create -n envname python=x.x anaconda
 
+# Clone an existing environment
+> conda create --clone cloned_env  --name name_of_clone
+
 # List the existing environments
 > conda info --envs
 

@@ -135,6 +135,9 @@ sqlite> .tables    # List the tables in the database
 sqlite> .mode line  # Viewing mode, others are column and list
 sqlite> select * from table ; # selects the data in a table
 
+# Check integrity of jpegs in folder and write details of images that are not ok (i.e. files not containing [OK], using grep -v which returns non matches) to results.txt file
+$ jpeginfo -c *.jpg | grep -v "[OK]"   >  results.txt
+
 ######## Logs and logins #############################################################################################################
 
 # Most recent log data 

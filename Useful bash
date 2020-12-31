@@ -60,6 +60,7 @@ add the numbers below to get permissions
 4 stands for "read", 2 stands for "write",1 stands for "execute", and 0 stands for "no permission
 e.g. chmod 700 file gives read, write, execute for the user. No permissions for anyone else
 
+
 ############# Cron jobs #################################################################################################################
 
 # Accessing the cron tab to edit the jobs
@@ -182,6 +183,11 @@ $ sudo apt-get autoremove -y
 $ sudo du -xh / | grep -P "G\t"
 
 
+######### Docker clean up #################################################################################
 
+$ Remove containers that are not running
+docker rm $(docker ps -a -q)
 
+# Remove untagged images, the image id is the 3rd field so $3 and then pipes to bash to run the docker remove images (docker rmi) command
+$ docker images | grep "<none>" | awk '{ print "docker rmi " $3 }' | bash  
 

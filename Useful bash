@@ -185,8 +185,8 @@ $ sudo du -xh / | grep -P "G\t"
 
 ######### Docker clean up #################################################################################
 
-$ Remove containers that are not running
-docker rm $(docker ps -a -q)
+# Remove containers that are not running
+$ docker rm $(docker ps -a -q)
 
 # Remove untagged images, the image id is the 3rd field so $3 and then pipes to bash to run the docker remove images (docker rmi) command
 $ docker images | grep "<none>" | awk '{ print "docker rmi " $3 }' | bash  

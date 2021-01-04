@@ -60,6 +60,10 @@ add the numbers below to get permissions
 4 stands for "read", 2 stands for "write",1 stands for "execute", and 0 stands for "no permission
 e.g. chmod 700 file gives read, write, execute for the user. No permissions for anyone else
 
+######### Linking files ##################################################################################################################
+# Creating a folder called external drive in the home folder that is linked to a mounted external drive called mydisk
+
+ln -s /mnt/mydisk/ /home/external_drive
 
 ############# Cron jobs #################################################################################################################
 

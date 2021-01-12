@@ -12,7 +12,7 @@ $ git commit -m "test commit"
 $ git commit -a -m "test commit"
 
 # pulls the latest version from the remote repo if run from local repo
-$ git pull (when a commit message is needed for this, ctrl x and then ctrl c to exit the editor - if it's nano)
+$ git pull (when a commit message is needed for this, press Esc then :wq , ctrl x and then ctrl c to exit the editor - if it's nano)
 
 # produces a record of commits, type q to exit
 $ git log

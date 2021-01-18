@@ -1,5 +1,5 @@
 
-## Some useful command line commands
+####################################### Some useful command line commands
 
 ########## Finding information on files ################################################################################################
 
@@ -138,9 +138,10 @@ $ docker exec -it docker_container_id  sudo -u abc php /config/www/nextcloud/occ
 $ echo "data=node[name=\"Gielgen\"];out;" >query.osm
 $ wget -O target.osm --post-file=query.osm "http://overpass-api.de/api/interpreter"
 
-# Command line to inspect sqlite database
+# Command line to inspect sqlite database (Ctrl d to exit
 $ sqlite3 database.db
 sqlite> .tables    # List the tables in the database
+sqlite> .schema table_name   # List the schema for a table
 sqlite> .mode line  # Viewing mode, others are column and list
 sqlite> select * from table ; # selects the data in a table
 

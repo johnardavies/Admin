@@ -196,3 +196,13 @@ $ docker rm $(docker ps -a -q)
 # Remove untagged images, the image id is the 3rd field so $3 and then pipes to bash to run the docker remove images (docker rmi) command
 $ docker images | grep "<none>" | awk '{ print "docker rmi " $3 }' | bash  
 
+######### Docker saving and getting data off and on the conatiner
+# Saving the container
+$ docker commit container_id  docker_user_name/name_of_saved_image:version_no
+$ docker save container_name > container_name.tar. # Save to a tar file
+
+# Exporting data from the container 
+$ docker cp container_id:/file/path/within/container /host/path/target
+
+# Sending data to the container in this case from the pwd  that is being sent to the folder with filepath :/src/direct in the container
+$ docker run -p local_port:container_port -v  "$(pwd)":/src/direct  docker_user_name/container_name

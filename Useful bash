@@ -187,6 +187,9 @@ $ sudo apt-get autoremove -y
 # Finds files taking up a lot of space, pipes the disc usage tool to grep, gets the gigabyte "G" size files
 $ sudo du -xh / | grep -P "G\t"
 
+###################################### Docker #############################################################
+# Log into a running container
+$ docker exec -it <container name> /bin/bash 
 
 ######## Docker getting the latest version of a container ########################################
 # Pulls the latest version and then restarts The -d flag means the process runs in the background  

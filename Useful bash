@@ -188,6 +188,10 @@ $ sudo apt-get autoremove -y
 $ sudo du -xh / | grep -P "G\t"
 
 
+######## Docker getting the latest version of a container ########################################
+# Pulls the latest version and then restarts The -d flag means the process runs in the background  
+$ docker-compose pull && docker-compose up -d
+
 ######### Docker clean up #################################################################################
 
 # Remove containers that are not running
@@ -196,7 +200,7 @@ $ docker rm $(docker ps -a -q)
 # Remove untagged images, the image id is the 3rd field so $3 and then pipes to bash to run the docker remove images (docker rmi) command
 $ docker images | grep "<none>" | awk '{ print "docker rmi " $3 }' | bash  
 
-######### Docker saving and getting data off and on the conatiner
+######### Docker saving and getting data off and on the container
 # Saving the container
 $ docker commit container_id  docker_user_name/name_of_saved_image:version_no
 $ docker save container_name > container_name.tar. # Save to a tar file

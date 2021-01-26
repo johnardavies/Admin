@@ -91,3 +91,8 @@ git pull origin master --allow-unrelated-histories
 
 ##################### Removing a folder and its contents from git history (use carefully) --ignore-unmatch means it doesn't throw an error if no match -r deletes contents
 $  git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch filepath/folder' HEAD
+
+##################### Deleting the .git file so you can get rid of the repo  -r is recursive for subfolders -f is force (use with caution!)
+$ rm -fr .git
+
+

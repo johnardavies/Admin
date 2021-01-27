@@ -52,6 +52,10 @@ $ sed '/^$/d'  file.txt >  file_noblanks.txt
 
 $ for file in *.pdf; do pdftotext -layout "$file"; done
 
+################# Viewing files in the terminal ##########################################################################################
+
+$ xmllint --format file.xml (To output file.xml in nicely printed format add -o pretty_file.xml)
+
 ########### Setting file permissions ####################################################################################################
 
 $ chmod (user|group|other) file
@@ -109,6 +113,7 @@ $ gpg -o outputfile encryptedfile
 
 #Backs up the text file text.txt to the pi external drive. -avz stands for archive (a), verbose (v), z (compress)
 $ rsync -avz text.txt pi@ip_address:/mnt/my_external_drive
+
 
 ########### Remote logins ##############################################################################################################
 

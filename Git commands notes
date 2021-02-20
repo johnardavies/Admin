@@ -68,9 +68,12 @@ $ git checkout new_branch
 #switch back to the master branch
 $ git checkout -
 
-#pushes changes to online repo where origin is the repo name and master is the branch name
-# just git push if the names are the same. If you have branched to a new branch, master changes to the new branch name
-$ git push origin master
+#pushes changes to online repo where origin is the repo name and main is the branch name
+# just git push if the names are the same. If you have branched to a new branch, main changes to the new branch name
+$ git push origin main
+
+#. To set up a new branch upstream
+$ git push --set-upstream origin branch_name or $ git push -u origin branch_name
 
 # Merges remote changes with local changes
 $ git pull origin master
@@ -80,6 +83,9 @@ $ git cherry-pick commit1  commit2
 
 # Delete a branch (use with care)
 $ git branch -D branch_name
+
+# Visualising the branching
+$ git log --all --decorate --oneline --graph
 
 ###################### See the files committed in a branch (--name-only returns file names only, r goes into sub-folders)
 $ git ls-tree --name-only -r branch_name

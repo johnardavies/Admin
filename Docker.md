@@ -6,7 +6,7 @@
 `$ docker build --tag container_name Folder_the_dockerfile_is_in`
 
 **Run the container**  (A -d flag runs the container in the background). The p flag maps the container port to a local port on the computer\
-`$ docker run container_id (or container_name) -p localport:containerport`
+`$ docker run -p localport:containerport container_id (or container_name)`
 
 **Log into a running container** the -i flag is to indicate we want to log into the container -t creates a text terminal\
 `$ docker exec -it container_id (or container_name) /bin/bash`

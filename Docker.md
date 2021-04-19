@@ -25,7 +25,7 @@
 **Remove untagged images** the image id is the 3rd field so $3 and then pipes to bash to run the docker remove images (docker rmi) command\
 `$ docker images | grep "<none>" | awk '{ print "docker rmi " $3 }' | bash  `
 
-###<u>Docker saving and getting data off and on the container</u>
+### Docker saving and getting data off and on the container
 
 **Saving the container**\
 `$ docker commit container_id  docker_user_name/name_of_saved_image:version_no`\

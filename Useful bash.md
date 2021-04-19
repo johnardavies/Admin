@@ -1,5 +1,5 @@
 
-####################################### Some useful command line commands
+## Some useful command line commands
 
 ########## Finding information on files ################################################################################################
 
@@ -31,6 +31,9 @@ $ grep -i -l "test" folder_location/*.txt |  wc -l
 
 # Getting the names of text files .txt in a folder that contain a word e.g. covid. ggrep on mac seems to work better than grep
 $ ggrep -i -l -r --include="*.txt" "Covid" folder_file_path
+
+# Get x lines after a match (switch -A flag to -B to get x lines before) 
+$ grep -A x "text_to_match"  file_name
 
 # To look at a large file, type q to exit
 $  less file 

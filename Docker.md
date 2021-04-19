@@ -28,7 +28,7 @@
 ### Docker saving and getting data off and on the container
 
 **Saving the container**\
-`$ docker commit container_id  docker_user_name/name_of_saved_image:version_no`
+`$ docker commit container_id  docker_user_name/name_of_saved_image:version_no`\
 `$ docker save container_name > container_name.tar. # Save to a tar file`
 
 **Exporting data from the container**\

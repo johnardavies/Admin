@@ -1,6 +1,6 @@
 ## Docker commands 
 
-<ins>###Building running and stopping a container</ins>
+### Building running and stopping a container
 
 **Build container image**\
 `$ docker build --tag container_name Folder_the_dockerfile_is_in`
@@ -17,7 +17,7 @@
 **Docker stop a running container**\
 `$ docker stop container_id (or container_name)`
 
-###<ins>Docker clean up</ins> 
+### Docker clean up 
 
 **Remove containers that are not running**\
 `$ docker rm $(docker ps -a -q)`
@@ -37,7 +37,7 @@
 **Sending data to the container in this case from the pwd  that is being sent to the folder with filepath :/src/direct in the container**\
 `$ docker run -p local_port:container_port -v  "$(pwd)":/src/direct  docker_user_name/container_name`
 
-###<ins>Docker-compose getting the latest version of a container</ins>
+### Docker-compose getting the latest version of a container<u>
 
 **Pulls the latest version and then restarts The -d flag means the process runs in the background**\
 `$ docker-compose pull && docker-compose up -d`

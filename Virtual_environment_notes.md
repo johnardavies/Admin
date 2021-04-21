@@ -40,10 +40,10 @@
 **activates the environment envname**
 `$ source envname/bin/activate`
 
-**Deactivate the environmneNT**
+**Deactivate the environmnent**
 `$ deactivate`
 
-###Saving the requirements and later installing them
+### Saving the requirements and later installing them
 
 **Saving the requirements, the below generates a requirements file**
 `$ pip freeze > requirements.txt` 

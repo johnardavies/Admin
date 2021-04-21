@@ -23,7 +23,8 @@
 
 **List all files in a folder of a certain size**\
 `$ find folder_path -type f -size 0 -exec ls {} \;`\
-In this case 0, but c for bytes, k for kilobytes, M for megabytes and G for gigabytes e.g. +4M (Greater than 4 Megabytes) -4M (Less than 4 Megabytes)\
+In this case 0, but c for bytes, k for kilobytes, M for megabytes and G for gigabytes\
+e.g. +4M (Greater than 4 Megabytes) -4M (Less than 4 Megabytes)\
 -type f means it looks at files only not directories , the -exec ls {} \; generates the output on consecutive lines
 
 **Counts the number of text files in a folder that contain a given word - in this example "test"**\

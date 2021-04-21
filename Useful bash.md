@@ -83,8 +83,8 @@ e.g. chmod 700 file gives read, write, execute for the user. No permissions for 
 `$ crontab -e`
 
 **Cronjob**\
- `***** /path/to/script.sh`  This version runs every minute
- Minute, Hour, Day of Month, Month of Year, Day of week
+ `***** /path/to/script.sh`  This version runs every minute\
+The order of times is Minute, Hour, Day of Month, Month of Year, Day of week
  
 **List cronjobs**
 `$ crontab -l`
@@ -201,6 +201,6 @@ e.g. chmod 700 file gives read, write, execute for the user. No permissions for 
 **Remove unused dependencies**\
 `$ sudo apt-get autoremove -y`
 
-**Finds files taking up a lot of space, pipes the disc usage tool to grep, gets the gigabyte "G" size files**
+**Finds files taking up a lot of space, pipes the disc usage tool to grep, gets the gigabyte "G" size files**\
 `$ sudo du -xh / | grep -P "G\t"`
 

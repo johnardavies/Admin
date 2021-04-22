@@ -22,8 +22,7 @@
 **6.Getting to prompt **
     The terminal will prompt with 'Are you sure you want to continue connecting (yes/no)?' 
      Say yes and you will log into the remote EC2 machine. The command line has the form
- 
-     `[ec2-user@ip-x-x-x ~]$`
+ `[ec2-user@ip-x-x-x ~]$`
      
 ### Transferring data to and from instances
 
@@ -34,7 +33,7 @@
 
 **The order reverses to copy a folder from cloud to local e.g.**
 
-`$ scp -r -i key_pair.pem ubuntu@ec2-xx-xxx-xxx-xxx.eu-west-2.compute.amazonaws.com:~/folder_in_home_directory/ /c/users/xxxx/documents/target_folder`\
+`$ scp -r -i key_pair.pem ubuntu@ec2-xx-xxx-xxx-xxx.eu-west-2.compute.amazonaws.com:~/folder_in_home_directory/ /c/users/xxxx/documents/target_folder`
 
 ### Listing, starting and stopping instances
 
@@ -42,10 +41,10 @@
 `$ aws ec2 describe-instances`
 
 **example of launching and stopping ec2 from command line**
-`$ aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e`\
+`$ aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e`
 
 **get instances' public ip addresses**
-`$ aws ec2 describe-instances --query "Reservations[*].Instances[*].PublicIpAddress" --output=text`\
+`$ aws ec2 describe-instances --query "Reservations[*].Instances[*].PublicIpAddress" --output=text`
 
 **stopping instances**
 `$ aws ec2 stop-instances --instance-ids i-1234567890abcdef0`
@@ -88,12 +87,12 @@ Custom TCP Rule, TCP, portno
 **and paste the following at the start of the file** \
 
 `c=get_config()`\
-`c.NotebookApp.certfile=u'/home/ubuntu/ssl/cert.pem'`\
-`c.NotebookApp.keyfile=u'/home/ubuntu/ssl/cert.key'`\    
+`c.NotebookApp.certfile=u'/home/ubuntu/ssl/cert.pem' \
+`c.NotebookApp.keyfile=u'/home/ubuntu/ssl/cert.key' \   
 `c.IPKernelApp.pylab='inline'`\
-`c.NotebookApp.ip='*'`\                                                                                                                                                       
-`c.NotebookApp.open_browser=False`\
-`c.NotebookApp.password=The_hash_that_was_generated_earlier`\
+`c.NotebookApp.ip='*' \`                                                                                                                                                       
+`c.NotebookApp.open_browser=False` \
+`c.NotebookApp.password=The_hash_that_was_generated_earlier` \
 
 
 

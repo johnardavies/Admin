@@ -40,10 +40,10 @@
 **lists the ec2 instances**
 `$ aws ec2 describe-instances`
 
-**example of launching and stopping ec2 from command line**
+**example of launching and stopping ec2 from command line**\
 `$ aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e`
 
-**get instances' public ip addresses**
+**get instances' public ip addresses**\
 `$ aws ec2 describe-instances --query "Reservations[*].Instances[*].PublicIpAddress" --output=text`
 
 **stopping instances**
@@ -87,10 +87,10 @@ Custom TCP Rule, TCP, portno
 **and paste the following at the start of the file** \
 
 `c=get_config()`\
-`c.NotebookApp.certfile=u'/home/ubuntu/ssl/cert.pem' \
-`c.NotebookApp.keyfile=u'/home/ubuntu/ssl/cert.key' \   
+`c.NotebookApp.certfile=u'/home/ubuntu/ssl/cert.pem'` \
+`c.NotebookApp.keyfile=u'/home/ubuntu/ssl/cert.key'`  
 `c.IPKernelApp.pylab='inline'`\
-`c.NotebookApp.ip='*' \`                                                                                                                                                       
+`c.NotebookApp.ip='*'`\                                                                                                                                                 
 `c.NotebookApp.open_browser=False` \
 `c.NotebookApp.password=The_hash_that_was_generated_earlier` \
 

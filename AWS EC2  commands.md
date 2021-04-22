@@ -90,9 +90,9 @@ Custom TCP Rule, TCP, portno
 `c.NotebookApp.certfile=u'/home/ubuntu/ssl/cert.pem'` \
 `c.NotebookApp.keyfile=u'/home/ubuntu/ssl/cert.key'`  
 `c.IPKernelApp.pylab='inline'`\
-`c.NotebookApp.ip='*'`\                                                                                                                                                 
+`c.NotebookApp.ip='*'`                                                                                                                                             
 `c.NotebookApp.open_browser=False` \
-`c.NotebookApp.password=The_hash_that_was_generated_earlier` \
+`c.NotebookApp.password=The_hash_that_was_generated_earlier` 
 
 
 

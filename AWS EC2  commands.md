@@ -19,7 +19,7 @@
    
    **! Don't forget to check the prefix - it is ec2-user@ here as this example is Amazon linux, but it varies according to type for Ubuntu it would be ubuntu**
    
-**6.Getting to prompt **
+**6.Getting to prompt**
     The terminal will prompt with 'Are you sure you want to continue connecting (yes/no)?' 
      Say yes and you will log into the remote EC2 machine. The command line has the form
  `[ec2-user@ip-x-x-x ~]$`
@@ -84,7 +84,7 @@ Custom TCP Rule, TCP, portno
 **Edit the jupyter config file**\
 `$ nano ~/.jupyter/jupyter_notebook_config.py`
 
-**and paste the following at the start of the file** \
+**and paste the following at the start of the file** 
 
 `c=get_config()`\
 `c.NotebookApp.certfile=u'/home/ubuntu/ssl/cert.pem'` \

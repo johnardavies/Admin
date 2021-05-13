@@ -90,6 +90,9 @@ $ git log --all --decorate --oneline --graph
 ###################### See the files committed in a branch (--name-only returns file names only, r goes into sub-folders)
 $ git ls-tree --name-only -r branch_name
 
+###################### See the files that have been added 
+$ git diff --name-only --cached
+
 ###################### Which online repo the local repo is linked to 
 
 #Checks which online repos the local repo is linked with

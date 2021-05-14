@@ -56,13 +56,16 @@ $ git stash pop
 
 ###################### Which branch is being worked on
 
+# Shows the current branch that is being worked on only
+$ git branch --show-current 
+
 # lists the branches and which one is being worked on (if tag -a is added both local and remote branches listed. If tag -r remote branches only listed)
 $ git branch
 
 # branches the repo into a new branch
 $ git branch new_branch
 
-# switch to working on the new branch
+# switch to working on the new branch (If a -b tag is added you create the branch at the same time)
 $ git checkout new_branch
 
 #switch back to the master branch

@@ -68,11 +68,11 @@ $ git branch new_branch
 # switch to working on the new branch (If a -b tag is added you create the branch at the same time)
 $ git checkout new_branch
 
-#switch back to the main branch
+# switch back to the previous active branch
 $ git checkout -
 
 # pushes local changes to online repo where origin is the remote and main is the branch name
-# just git push if the names are the same. If you have branched to a new branch, main changes to the new branch name
+# If you have branched to a new branch and want to push that, main changes to the new branch name
 $ git push origin main
 
 # To set up a new branch upstream

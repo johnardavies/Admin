@@ -68,14 +68,14 @@ $ git branch new_branch
 # switch to working on the new branch (If a -b tag is added you create the branch at the same time)
 $ git checkout new_branch
 
-#switch back to the master branch
+#switch back to the main branch
 $ git checkout -
 
-#pushes changes to online repo where origin is the repo name and main is the branch name
+# pushes local changes to online repo where origin is the remote and main is the branch name
 # just git push if the names are the same. If you have branched to a new branch, main changes to the new branch name
 $ git push origin main
 
-#. To set up a new branch upstream
+# To set up a new branch upstream
 $ git push --set-upstream origin branch_name or $ git push -u origin branch_name
 
 # Merges remote changes with local changes
@@ -89,6 +89,15 @@ $ git branch -D branch_name
 
 # Visualising the branching
 $ git log --all --decorate --oneline --graph
+
+######################### Merging and rebasing branches
+# Merging the banch feature into the branch main
+$ git checkout feature
+$ git merge main
+
+# Adds in the features branch into the master branch (creates new commits to do so which are then added on top of main)
+$ git checkout feature
+$ git rebase main
 
 ###################### See the files committed in a branch (--name-only returns file names only, r goes into sub-folders)
 $ git ls-tree --name-only -r branch_name
@@ -104,8 +113,8 @@ $ git remote -v
 # Changes the url of the remote repo that the local copy is linked to
 $ git remote set-url origin new.git.url/here
 
-################## Merges the git commit history of two previously unrelated projects, pulling the master branch from the remote origin that has been set up to the local repo
-git pull origin master --allow-unrelated-histories
+################## Merges the git commit history of two previously unrelated projects, pulling the main branch from the remote origin that has been set up to the local repo
+git pull origin main --allow-unrelated-histories
 
 ##################### Removing a folder and its contents from git history (use carefully) --ignore-unmatch means it doesn't throw an error if no match -r deletes contents
 $  git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch filepath/folder' HEAD

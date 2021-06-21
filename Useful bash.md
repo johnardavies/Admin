@@ -34,6 +34,10 @@ e.g. +4M (Greater than 4 Megabytes) -4M (Less than 4 Megabytes)\
 **Getting the names of text files .txt in a folder that contain a word e.g. covid. ggrep on mac seems to work better than grep**\
 `$ ggrep -i -l -r --include="*.txt" "Covid" folder_file_path`
 
+**Showing the unique lines in a fike** \
+`$ sort file.txt | xargs -n 1| uniq`\
+Piping sort to uniq can do this, but may fail with whitespace. Piping the sort to xargs -n 1 first strips out trailing and leading whitespace
+
 **Get x lines after a match (switch -A flag to -B to get x lines before)**\
 `$ grep -A x "text_to_match"  file_name`
 

@@ -34,6 +34,10 @@ e.g. +4M (Greater than 4 Megabytes) -4M (Less than 4 Megabytes)\
 **Getting the names of text files .txt in a folder that contain a word e.g. covid. ggrep on mac seems to work better than grep**\
 `$ ggrep -i -l -r --include="*.txt" "Covid" folder_file_path`
 
+**Searches a sql script for text strings that have "scratch" in them, returning just those strings**\
+`$ grep -o "scratch\S*" script.sql`
+The S keeps matching non-whitespace till you hit the end of the string`
+
 **Showing the unique lines in a fike** \
 `$ sort file.txt | xargs -n 1| uniq`\
 Piping sort to uniq can do this, but may fail with whitespace. Piping the sort to xargs -n 1 first strips out trailing and leading whitespace
@@ -80,7 +84,7 @@ e.g. chmod 700 file gives read, write, execute for the user. No permissions for 
 ## Linking files 
 
 **Creating a folder called external drive in the home folder that is linked to a mounted external drive called mydisk**\
-`ln -s /mnt/mydisk/ /home/external_drive`
+`$ ln -s /mnt/mydisk/ /home/external_drive`
 
 ## Cron jobs 
 

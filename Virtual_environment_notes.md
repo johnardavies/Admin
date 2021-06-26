@@ -31,6 +31,24 @@
 `> conda env remove --name env_to_remove` 
 
 
+## Pipenv virtual environments 
+
+**Install a package in the environment (In this case numpy, can also specify version)**
+`$ pipenv install numpy`
+
+**Start a pipenv virtual environment within the project folde**
+`$ pipenv shell`
+
+**Run a jupyter notebook within the environment (assuming it's installed** 
+`$ pipenv run jupyter notebook`
+
+**Lock the environment**
+`$ pipenv lock`
+
+**Only install the locked version**
+`$ pipenv install --ignore-pipfile`
+
+
 ## Bash virtual enviromments
 (after installing using $ sudo -H pip install virtualenv)
 
@@ -50,5 +68,7 @@
 
 **install the requirements**
 `$ pip install -r requirements.txt`
+
+
 
 

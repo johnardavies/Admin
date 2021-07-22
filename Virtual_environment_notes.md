@@ -48,6 +48,9 @@
 **Only install the locked version**
 `$ pipenv install --ignore-pipfile`
 
+**Exit the environment (env_name)**
+`(env_name) $ exit`
+
 
 ## Bash virtual enviromments
 (after installing using $ sudo -H pip install virtualenv)

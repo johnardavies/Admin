@@ -26,6 +26,7 @@ $ git ls-tree -r master --name-only
 # Searches the git history
 $ git grep <regexp> $(git rev-list --all) # git rev-list --all lists all the commit objects in reverse chronological order (The commit hashes)
 
+
 ##################### Undoing/Amending changes you have made
 
 # Gives the opportunity to revise the last commit message or if you need to
@@ -89,6 +90,9 @@ $ git branch -D branch_name
 
 # Visualising the branching
 $ git log --all --decorate --oneline --graph
+
+# Clone a specifc branch (the_branch_you_want) from a repo, rather than getting all the branches
+$ git clone -b the_branch_you_want --single-branch https://github.com/some_repo
 
 ######################### Merging and rebasing branches
 # Merging the banch feature into the branch main

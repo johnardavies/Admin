@@ -1,6 +1,6 @@
-## Git commands
+# Git commands
 
-### Adding and committing files
+## Adding and committing files
 
 **within the repo initalise git**\
 `$ git init`
@@ -14,10 +14,7 @@
 **combines the add and the commit command in one line**\
 `$ git commit -a -m "test commit"`
 
-**pulls the latest version from the remote repo if run from local repo**\
-`$ git pull` (when a commit message is needed for this, press Esc then :wq , ctrl x and then ctrl c to exit the editor - if it's nano)
-
-### Getting information
+## Getting information
 
 **produces a record of commits, type q to exit**\
 `$ git log`
@@ -38,10 +35,10 @@
 `$ git grep <regexp> $(git rev-list --all)` # git rev-list --all lists all the commit objects in reverse chronological order (The commit hashes)
 
 
-### Undoing/Amending changes you have made
+## Undoing/Amending changes that have been made
 
-**Gives the opportunity to revise the last commit message or if you need to
-make further changes incorporate them into an updated version of the last commit**\
+**Gives the opportunity to revise the last commit message or if you need to**\
+**make further changes incorporate them into an updated version of the last commit**\
 `$ git commit --amend`
 
 **Change the commit message of the last commit that has not yet been pushed**\
@@ -50,8 +47,8 @@ make further changes incorporate them into an updated version of the last commit
 **Reverts the commit with index indexofcommit**\
 `$ git revert indexofcommit`
 
-# Remove a file that has been added, but not commited
-$ git reset manual_check_av.csv
+**Remove a file that has been added, but not commited**\
+`$ git reset manual_check_av.csv`
 
 **Rolls back all local changes, but does not remove the last commit**\
 `$ git reset --hard`
@@ -62,7 +59,7 @@ $ git reset manual_check_av.csv
 **Undoes uncommited changes to a file permanently**\
 `git checkout -- file`
 
-### Stashing
+## Stashing
 
 **Removes uncommited changes to a 'stash'**\
 `$ git stash`
@@ -70,7 +67,7 @@ $ git reset manual_check_av.csv
 **Removes the changes from the stash and applies them to branch you are working on**\
 `$ git stash pop`
 
-### Working on branches
+## Working on branches
 
 **Shows the current branch that is being worked on only**\
 `$ git branch --show-current`
@@ -87,16 +84,6 @@ $ git reset manual_check_av.csv
 **switch back to the previous active branch**\
 `$ git checkout -`
 
-**pushes local changes to online repo where origin is the remote and main is the branch name**\
-**If you have branched to a new branch and want to push that, main changes to the new branch name**\
-`$ git push origin main`
-
-**To set up a new branch upstream**\
-`$ git push --set-upstream origin branch_name` or `$ git push -u origin branch_name`
-
-**Merges remote changes with local changes**\
-`$ git pull origin master`
-
 **Selects specific commits e.g. commit1  commit2 from another branch and applies it to the branch you're on**\
 `$ git cherry-pick commit1  commit2`
 
@@ -109,7 +96,7 @@ $ git reset manual_check_av.csv
 **Clone a specifc branch (the_branch_you_want) from a repo, rather than getting all the branches**\
 `$ git clone -b the_branch_you_want --single-branch https://github.com/some_repo`
 
-### Merging and rebasing branches
+## Merging and rebasing branches
 
 **Merging the banch feature into the branch main**\
 `$ git checkout feature`
@@ -119,13 +106,28 @@ $ git reset manual_check_av.csv
 `$ git checkout feature`
 `$ git rebase main`
 
-### Which online repo the local repo is linked to 
+## Which remote repo the local repo is linked to 
 
 **Checks which online repos the local repo is linked with**\
 `$ git remote -v`
 
 **Changes the url of the remote repo that the local copy is linked to**\
 `$ git remote set-url origin new.git.url/here`
+
+## Interacting with the remote repo
+
+**pulls the latest version from the remote repo if run from local repo**\
+`$ git pull` (when a commit message is needed for this, press Esc then :wq , ctrl x and then ctrl c to exit the editor - if it's nano)
+
+**pushes local changes to online repo where origin is the remote and main is the branch name**\
+**If you have branched to a new branch and want to push that, main changes to the new branch name**\
+`$ git push origin main`
+
+**To set up a new branch upstream**\
+`$ git push --set-upstream origin branch_name` or `$ git push -u origin branch_name`
+
+**Merges remote changes with local changes**\
+`$ git pull origin master`
 
 **Merges the git commit history of two previously unrelated projects, pulling the main branch from the remote origin that has been set up to the local repo**\
 `$ git pull origin main --allow-unrelated-histories`

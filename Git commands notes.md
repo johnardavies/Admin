@@ -1,6 +1,6 @@
 ## Git commands
 
-## Adding and committing files
+### Adding and committing files
 
 **within the repo initalise git**\
 `$ git init`
@@ -17,14 +17,22 @@
 **pulls the latest version from the remote repo if run from local repo**\
 `$ git pull` (when a commit message is needed for this, press Esc then :wq , ctrl x and then ctrl c to exit the editor - if it's nano)
 
+### Getting information
+
 **produces a record of commits, type q to exit**\
 `$ git log`
+
+**See the files that have been added**\
+`$ git diff --name-only --cached`
 
 **shows files in last commit**\
 `$ git diff-tree --name-only -r indexofcommit`
 
 **Lists the files that are being tracked in the master branch**\
 `$ git ls-tree -r master --name-only`
+
+**See the files committed in a branch (--name-only returns file names only, r goes into sub-folders)**\
+`$ git ls-tree --name-only -r branch_name`
 
 **Searches the git history**\
 `$ git grep <regexp> $(git rev-list --all)` # git rev-list --all lists all the commit objects in reverse chronological order (The commit hashes)
@@ -55,10 +63,11 @@ $ git reset manual_check_av.csv
 `git checkout -- file`
 
 ### Stashing
-# Removes uncommited changes to a 'stash'
+
+**Removes uncommited changes to a 'stash'**\
 `$ git stash`
 
-# Removes the changes from the stash and applies them to branch you are working on
+**Removes the changes from the stash and applies them to branch you are working on**\
 `$ git stash pop`
 
 ### Working on branches
@@ -85,7 +94,7 @@ $ git reset manual_check_av.csv
 **To set up a new branch upstream**\
 `$ git push --set-upstream origin branch_name` or `$ git push -u origin branch_name`
 
-# Merges remote changes with local changes
+**Merges remote changes with local changes**\
 `$ git pull origin master`
 
 **Selects specific commits e.g. commit1  commit2 from another branch and applies it to the branch you're on**\
@@ -110,12 +119,6 @@ $ git reset manual_check_av.csv
 `$ git checkout feature`
 `$ git rebase main`
 
-### See the files committed in a branch (--name-only returns file names only, r goes into sub-folders)
-`$ git ls-tree --name-only -r branch_name`
-
-### See the files that have been added 
-`$ git diff --name-only --cached`
-
 ### Which online repo the local repo is linked to 
 
 **Checks which online repos the local repo is linked with**\
@@ -124,13 +127,15 @@ $ git reset manual_check_av.csv
 **Changes the url of the remote repo that the local copy is linked to**\
 `$ git remote set-url origin new.git.url/here`
 
-### Merges the git commit history of two previously unrelated projects, pulling the main branch from the remote origin that has been set up to the local repo
+**Merges the git commit history of two previously unrelated projects, pulling the main branch from the remote origin that has been set up to the local repo**\
 `$ git pull origin main --allow-unrelated-histories`
 
-### Removing a folder and its contents from git history (use carefully) --ignore-unmatch means it doesn't throw an error if no match -r deletes contents
+## Deleting files and folders
+
+**Removing a folder and its contents from git history (use carefully) --ignore-unmatch means it doesn't throw an error if no match -r deletes contents**\
 `$  git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch filepath/folder' HEAD`
 
-### Deleting the .git file so you can get rid of the repo  -r is recursive for subfolders -f is force (use with caution!)
+**Deleting the .git file so you can get rid of the repo  -r is recursive for subfolders -f is force (use with caution!)**\
 `$ rm -fr .git`
 
 

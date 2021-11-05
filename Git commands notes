@@ -39,7 +39,10 @@ $ git commit --amend -m "New commit message."
 #Reverts the commit with index indexofcommit
 $ git revert indexofcommit
 
-# Rolls back local changes, but does not remove the last commit
+# Remove a file that has been added, but not commited
+$ git reset manual_check_av.csv
+
+# Rolls back all local changes, but does not remove the last commit
 $ git reset --hard
 
 # Go back to the state after a past commit with commit hash abcd1

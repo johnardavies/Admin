@@ -25,6 +25,9 @@
 **shows files in last commit**\
 `$ git diff-tree --name-only -r indexofcommit`
 
+**gets the difference between two branches (branch 1 and branch 2) head**
+`$ git diff branch1..branch2`
+
 **Lists the files that are being tracked in the master branch**\
 `$ git ls-tree -r master --name-only`
 

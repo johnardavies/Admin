@@ -13,7 +13,7 @@
 `$ sudo apt install ufw`
 
 **Enable ufw to run**\
-`sudo ufw enable`
+`$ sudo ufw enable`
 
 **Check to see if ufw is running**\
 `$ sudo ufw status`
@@ -30,7 +30,7 @@
 ### Fail2ban commands
 
 **Install Fail2Ban**\
-`sudo apt install fail2ban`
+`$ sudo apt install fail2ban`
 
 **Check status of Fail2Ban (Note the conf file has to be changed to use UFW**\
 `$ sudo systemctl status fail2ban`
@@ -42,7 +42,7 @@
 `$ sudo fail2ban-client status`
 
 **Check the banning status of ssh**\
-`sudo fail2ban-client status ssh`
+`$ sudo fail2ban-client status ssh`
 
 **See the list of banned ips**\
-`sudo tail -f /var/log/fail2ban.log`
+`$ sudo tail -f /var/log/fail2ban.log`

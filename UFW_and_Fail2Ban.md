@@ -18,7 +18,7 @@
 **Check to see if ufw is running**\
 `$ sudo ufw status`
 
-**Enable ufw to run. The default is to deny all incoming and allow all outgoing**
+**Enable ufw to run. The default is to deny all incoming and allow all outgoing**\
 `sudo ufw enable`
 
 **Allow ssh connections**\

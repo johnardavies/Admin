@@ -4,3 +4,4 @@ This repo is a collection of commands I have found useful for:
 - Docker
 - Python virtual environments
 - AWS (EC2 and S3)
+- UFW and Fail2Ban

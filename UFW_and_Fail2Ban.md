@@ -2,7 +2,7 @@
 
 ### General commands
 
-**Lists failed logins (-a flag adds the hostname). Piping to more give pagination••\
+**Lists failed logins (-a flag adds the hostname). Piping to more give pagination**\
 `$ lastb -a | more`
 
 **Getting information on an ip address**\

@@ -12,14 +12,11 @@
 **Installing ufw**\
 `$ sudo apt install ufw`
 
-**Enable ufw to run**\
+**Enable ufw to run. The default is to deny all incoming and allow all outgoing**\
 `$ sudo ufw enable`
 
 **Check to see if ufw is running**\
 `$ sudo ufw status`
-
-**Enable ufw to run. The default is to deny all incoming and allow all outgoing**\
-`$ sudo ufw enable`
 
 **Allow ssh connections**\
 `$ sudo ufw allow ssh`

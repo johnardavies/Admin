@@ -32,7 +32,7 @@
 **Install Fail2Ban**\
 `sudo apt install fail2ban`
 
-**Check status of Fail2Ban (Note the conf file has to be changed to use UFW**
+**Check status of Fail2Ban (Note the conf file has to be changed to use UFW**\
 `$ sudo systemctl status fail2ban`
 
 **Edit the conditions for blocking an ip address**\

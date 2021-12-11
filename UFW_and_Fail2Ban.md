@@ -8,10 +8,10 @@
 **Getting information on an ip address**\
 `$ whois ip_address`
 
-**Piping failed logins to awk to extract the ip address and write to file**
+**Piping failed logins to awk to extract the ip address and write to file**\
 `$lastb -a | awk -F " " '{print $NF}' | uniq > failed_login_ips.txt` 
 
-**Shell script to send the logins to whois**\
+**Shell script to send the logins to whois and write to text file**\
 #!/bin/bash\
 for domain in \`cat failed_login_ips.txt\`\
 do\

@@ -8,6 +8,18 @@
 **Getting information on an ip address**\
 `$ whois ip_address`
 
+**Piping failed logins to awk to extract the ip address and write to file**
+`$lastb -a | awk -F " " '{print $NF}' | uniq > failed_login_ips.txt` 
+
+**Shell script to send the logins to whois**\
+#!/bin/bash\
+for domain in \`cat failed_login_ips.txt\`\
+do\
+   echo $domain\
+   \`whois $domain >> failed_ips_info.txt\`\
+done
+
+
 ### UFW commands
 **Installing ufw**\
 `$ sudo apt install ufw`

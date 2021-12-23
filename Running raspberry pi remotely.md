@@ -44,7 +44,7 @@ You can now log out of the raspberry pi by typing exit and the programme will ke
 
 **6. To get back into the session from the home machine command line ssh back into the pi**
 
-`$ ssh pi@ip_address and input password`\
+`$ ssh pi@ip_address and input password`
 
 `pi $ screen -list` To list the processes that have been left running, example of session name  10439.apicall.raspberrypi
 

@@ -38,7 +38,9 @@
 `$ git grep <regexp> $(git rev-list --all)` # git rev-list --all lists all the commit objects in reverse chronological order (The commit hashes)
 
 
-## Undoing/Amending changes that have been made
+## Undoing/Amending changes that have been made 
+
+*git commit --amend to edit the last commit**
 
 **Gives the opportunity to revise the last commit message or if you need to**\
 **make further changes incorporate them into an updated version of the last commit**\
@@ -47,19 +49,31 @@
 **Change the commit message of the last commit that has not yet been pushed**\
 `$ git commit --amend -m "New commit message."`
 
+*git revert to undo an existing commit that has been made. It does not rewrite commit history*
+
 **Reverts the commit with index indexofcommit**\
 `$ git revert indexofcommit`
 
-**Remove a file that has been added, but not commited**\
+ *git reset to undo uncommited changes or commits in a private branch. Three different kinds of reset (mixed, soft and hard - mixed is the default)*
+
+**Remove a file from the index that has been added, but not commited**\
 `$ git reset manual_check_av.csv`
 
-**Rolls back all local changes, but does not remove the last commit**\
-`$ git reset --hard`
+**Remove the changes in the last commit from the index, but keep them locally e.g. you just made a commit you don't like, but want to keep the work and fix the commit**\
+`$ git reset --mixed HEAD~1`
+
+**Keeps the files in the index and locally the same - changes show up as changes to be committed**\
+`$ git reset --soft HEAD~1`
+
+**Remove all of the change in the past commit, both locally and from the index (use with care)**\
+`$ git reset --hard HEAD~1`
+
+*git checkout undoes changes at the file level*
 
 **Go back to the state after a past commit with commit hash abcd1**\
 `$ git checkout abcd1`
 
-**Undoes uncommited changes to a file permanently**\
+**Undoes uncommited changes to a file permanently. It updates the working directory and not the indez**\
 `git checkout -- file`
 
 ## Stashing

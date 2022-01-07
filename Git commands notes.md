@@ -40,7 +40,7 @@
 
 ## Undoing/Amending changes that have been made 
 
-*git commit --amend to edit the last commit**
+*git commit --amend to edit the last commit*
 
 **Gives the opportunity to revise the last commit message or if you need to**\
 **make further changes incorporate them into an updated version of the last commit**\
@@ -95,13 +95,19 @@
 **branches the repo into a new branch**\
 `$ git branch new_branch`
 
+**branch off a previous commit**\
+`$ git branch new_branch commit-id`
+
 **switch to working on the new branch (If a -b tag is added you create the branch at the same time)**\
 `$ git checkout new_branch`
 
 **switch back to the previous active branch**\
 `$ git checkout -`
 
-**Selects specific commits e.g. commit1  commit2 from another branch and applies it to the branch you're on**\
+**switch to working on a new branch branching off another branch**\
+`git checkout -b new_branch branch_branched_off`
+
+  **Selects specific commits e.g. commit1  commit2 from another branch and applies it to the branch you're on**\
 `$ git cherry-pick commit1  commit2`
 
 **Delete a branch (use with care)**\

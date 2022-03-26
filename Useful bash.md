@@ -69,7 +69,9 @@ Piping sort to uniq can do this, but may fail with whitespace. Piping the sort t
 
 ## Converting logfile to csv
 Converts a logfile writen out to a test file to a csv by extracting columns. Last 3 columns ($5,$6,$7) kept together as they are a datetime\
-`$ cat logfile.txt | awk '{print $1 " ,  " $2 " , " $3 " , " $4 ",  " $5 ,$6 ,$7}' > log_test.csv`
+`$ cat logfile.txt | awk '{print $1 " ,  " $2 " , " $3 " , " $4 ",  " $5 ,$6 ,$7}' > log_test.csv`\
+If there are missing values columns may get mixed up. In this case find the columnwidths and set manually e.g.\
+awk 'BEGIN{FIELDWIDTHS="9 13 17 4 22"} {print $1 " ,  " $2 " , " $3 " , " $4 ",  " $5 ,$6 ,$7}'
 
 ## Viewing files in the terminal 
 

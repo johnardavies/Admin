@@ -24,6 +24,10 @@
 
 `$ aws s3 rm s3://bucket-name/A1`
 
+**Delete all the files in the bucket**
+
+`$ aws s3 rm s3://bucket-name --recursive`
+
 **sync Uploads all the files in a folder that are new or modified to an s3 bucket**
 
 `$ aws s3 sync . s3://bucket-name`

@@ -182,6 +182,9 @@ The order of times is Minute, Hour, Day of Month, Month of Year, Day of week
 (i.e. files not containing [OK], using grep -v which returns non matches) to results.txt file\
 `$ jpeginfo -c *.jpg | grep -v "[OK]"   >  results.txt`
 
+**Download YouTube videos using youtube-dl which can be installed with homebrew**\
+`$ youtube-dl  hyperlink_to_video`
+
 ## Logs and logins 
 
 **Most recent log data**

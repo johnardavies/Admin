@@ -1,4 +1,4 @@
-## Commands for Ultimate Firewall (UFW) and Fail2Ban and others relating to security
+## Commands for Uncomplicated Firewall (UFW) and Fail2Ban and others relating to security
 
 ### General commands
 

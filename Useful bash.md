@@ -51,7 +51,10 @@ Piping sort to uniq can do this, but may fail with whitespace. Piping the sort t
 **To look at a large file, type q to exit**\
 `$  less file` 
 
-## Moving files 
+## Moving files
+
+**copy all the files in the folder copy_folder to the dest_folder**\
+`cp -a /copy_folder/. /dest_folder/`
 
 **copies all the files in one folder with a .doc extension to a new directory labelled backup**\
 `$ cp *.doc /filepath/backup`

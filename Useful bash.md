@@ -70,6 +70,9 @@ Piping sort to uniq can do this, but may fail with whitespace. Piping the sort t
 **Extracting text from pdf files in a folder (requires sudo apt install poppler-utils and sudo apt install calibre)**\
 `$ for file in *.pdf; do pdftotext -layout "$file"; done`
 
+**Get the first column of a space separated file.txt**\
+`$ awk '{print $1}' file.txt`
+
 ## Converting logfile to csv
 Converts a logfile writen out to a test file to a csv by extracting columns. Last 3 columns ($5,$6,$7) kept together as they are a datetime\
 `$ cat logfile.txt | awk '{print $1 " ,  " $2 " , " $3 " , " $4 ",  " $5 ,$6 ,$7}' > log_test.csv`\

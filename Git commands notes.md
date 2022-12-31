@@ -155,6 +155,11 @@
 **Merges the git commit history of two previously unrelated projects, pulling the main branch from the remote origin that has been set up to the local repo**\
 `$ git pull origin main --allow-unrelated-histories`
 
+## Ignoring files
+
+**Ignoring files create a .gitignore file and then add the names of the files you want to ignore to it**\
+`$ touch .gitignore`
+
 ## Deleting files and folders
 
 **Removing a folder and its contents from git history (use carefully) --ignore-unmatch means it doesn't throw an error if no match -r deletes contents**\

@@ -8,6 +8,9 @@
 **Run the container**  (A -d flag runs the container in the background). The p flag maps the container port to a local port on the computer\
 `$ docker run -p localport:containerport container_id (or container_name)`
 
+If you want to pass a variable to the container (here called key, with value key_value) add a -env (-e flag) e.g.\
+`$ docker run -e key='key_value' -p localport:containerport container_id (or container_name)`
+
 **Log into a running container** the -i flag is to indicate we want to log into the container -t creates a text terminal\
 `$ docker exec -it container_id (or container_name) /bin/bash`
 

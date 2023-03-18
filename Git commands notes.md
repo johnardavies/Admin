@@ -160,6 +160,11 @@
 **Ignoring files create a .gitignore file and then add the names of the files you want to ignore to it**\
 `$ touch .gitignore`
 
+## Moving and renaming files
+
+**Renames the file (works like std mv command)**\
+`$ git mv fil_name.txt file_name.txt`
+
 ## Deleting files and folders
 
 **Removing a folder and its contents from git history (use carefully) --ignore-unmatch means it doesn't throw an error if no match -r deletes contents**\

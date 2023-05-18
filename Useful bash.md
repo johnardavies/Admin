@@ -41,7 +41,7 @@ The S keeps matching non-whitespace till you hit the end of the string`
 **Gets all the text after hashtags in a file (the_file.py) and sends it to a file the_comments.txt i.e. extracts comments in R and Python files**\
 `$ sed -n -e 's/^.*# //p' the_file.py |sed 's/}//'  >> the_comments.txt`
 
-**Get all the text after a standard delimeter. Here we are extracting the 2nd element after | `
+**Get all the text after a standard delimeter given by the -d flag (here '|'). In this example we are extracting the 2nd element after |**\
  `$ cut -d '|' -f2  outputs.tx`
 
 **Showing the unique lines in a file**\

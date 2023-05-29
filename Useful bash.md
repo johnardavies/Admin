@@ -236,6 +236,7 @@ The order of times is Minute, Hour, Day of Month, Month of Year, Day of week
 
 ## Networking
 **Gets the details of the devices that are connected to an ip (Need to install nmap)**\
+**-sn pings all the addresses on subnet but does not scan open ports**\
 `$ nmap -sn xxx.xxx.x.x/24`
 
 **Get the details of the device's internet configuration e.g. what is the ip thw wifi is connected to**\

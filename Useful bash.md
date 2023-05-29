@@ -234,3 +234,16 @@ The order of times is Minute, Hour, Day of Month, Month of Year, Day of week
 **Finds files taking up a lot of space, pipes the disc usage tool to grep, gets the gigabyte "G" size files**\
 `$ sudo du -xh / | grep -P "G\t"`
 
+## Networking
+**Gets the details of the devices that are connected to an ip (Need to install nmap)**\
+`$ nmap -sn xxx.xxx.x.x/24`
+
+**Get the details of the device's internet configuration e.g. what is the ip thw wifi is connected to**\
+`$ ifconfig`
+
+**The wifi config for a pi**\
+`$ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
+
+**Config file to set up a static ip address**\
+`$ sudo nano /etc/dhcpcd.conf`
+

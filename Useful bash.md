@@ -12,6 +12,9 @@
 **Gets the 10 largest files sorted by size (du -h gives disk usage -h tag for readable format) (sort-nr tags is numeric reverse order)**\
 `$ du -h | sort -nr | head -n 10`
 
+**Cleaner file size info top 10**\
+`$ du -ha ~ | sort -rh | head -10`
+
 **Lists the file types in a directory labelled dir. Loops through file names, gets the 2nd field and sorts for unique file types**\
 `$ for file in dir/*; do file "$file" | cut -d: -f 2; done | sort -u`
 

@@ -34,6 +34,9 @@ e.g. +4M (Greater than 4 Megabytes) -4M (Less than 4 Megabytes)\
 `$ grep -i -l "test" folder_location/*.txt |  wc -l`\
 -i makes the grep case insensitive, -l makes the grep output filenames only. This is then piped to wc -l where the -l gives line count
 
+**Basic grep search of the files in a folder that contains a search term**\
+`$ grep -i -rl "search_term" folder_file path`
+
 **Getting the names of text files .txt in a folder that contain a word e.g. covid. ggrep on mac seems to work better than grep**\
 `$ ggrep -i -l -r --include="*.txt" "Covid" folder_file_path`
 

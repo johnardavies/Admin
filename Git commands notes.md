@@ -134,6 +134,9 @@
 **Checks which online repos the local repo is linked with**\
 `$ git remote -v`
 
+**Add the url of a remote repo to a new local repo**\
+`$ git remote add origin https://github.com/user_name/repo_name`
+
 **Changes the url of the remote repo that the local copy is linked to**\
 `$ git remote set-url origin new.git.url/here`
 

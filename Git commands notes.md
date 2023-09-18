@@ -17,7 +17,9 @@
 ## Getting information
 
 **produces a record of commits, type q to exit**\
-`$ git log`
+`$ git log`\
+The commits by a given author (--author) and for the details of what has changed (-p)\
+`$ git log -p --author="name"`
 
 **See the files that have been added**\
 `$ git diff --name-only --cached`

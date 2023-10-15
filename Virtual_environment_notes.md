@@ -12,6 +12,12 @@
 **Activates the environment envname**
 `> conda activate envname`
 
+**Get the requirements file**
+`> conda list -e > requirements.txt`
+
+**Create condas environment from the requirements file**
+`> conda create --name <env> --file requirements.txt`
+
 **Launch Jupyter notebook within activated environment (assuming it's already installed)**
 `(envname) > jupyter notebook`
 

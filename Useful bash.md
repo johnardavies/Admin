@@ -38,6 +38,7 @@ e.g. +4M (Greater than 4 Megabytes) -4M (Less than 4 Megabytes)\
 `$ grep -i -rl "search_term" folder_file path`
 
 **Getting the names of text files .txt in a folder that contain a word e.g. covid. ggrep on mac seems to work better than grep**\
+**if you want to exclude files e.g tableau workbooks use the flag --exclude="*.twb"**\
 `$ ggrep -i -l -r --include="*.txt" "Covid" folder_file_path`
 
 **Searches a sql script for text strings that have "scratch" in them, returning just those strings**\

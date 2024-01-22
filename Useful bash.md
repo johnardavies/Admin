@@ -6,6 +6,9 @@
 **list file info in date order**\
 `$ ls -lt`
 
+**pipe file names to csv**\
+`ls -1 > filenames.csv`
+
 **Number of files in folder**\
 `$ ls | wc -l` (-l gives line count) 
 

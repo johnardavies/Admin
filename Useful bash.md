@@ -7,7 +7,7 @@
 `$ ls -lt`
 
 **pipe file names to csv**\
-`ls -1 > filenames.csv`
+`$ ls -1 > filenames.csv`
 
 **Number of files in folder**\
 `$ ls | wc -l` (-l gives line count) 

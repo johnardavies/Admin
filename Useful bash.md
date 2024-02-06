@@ -67,6 +67,9 @@ Piping sort to uniq can do this, but may fail with whitespace. Piping the sort t
 **To look at a large file, type q to exit**\
 `$  less file` 
 
+***Get the first line and line 206 from usage.csv***\
+`sed -n -e 1p  -e  206p usage.csv`
+
 ## Moving files
 
 **copy all the files in the folder copy_folder to the dest_folder**\

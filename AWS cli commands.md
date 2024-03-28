@@ -6,3 +6,6 @@
 
 **Get details on a given IAM user here called IAM_name**\
 `aws iam get-user --user-name IAM_name`
+
+**List the keypairs**\
+`aws ec2 --profile default describe-key-pairs --query KeyPairs[].[KeyName]`

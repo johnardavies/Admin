@@ -47,8 +47,10 @@
 `$ aws ec2 describe-instances --query "Reservations[*].Instances[*].PublicIpAddress" --output=text`
 
 **stopping instances**
-`$ aws ec2 stop-instances --instance-ids i-1234567890abcdef0`
+`$ aws ec2 stop-instances --instance-ids example_id`
 
+**deleting instances**
+`$ aws ec2 terminate-instances --instance-ids example_id`
 
 ### Logging into a Jupyter notebook
 

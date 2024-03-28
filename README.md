@@ -3,5 +3,5 @@ This repo is a collection of commands I have found useful for:
 - Git
 - Docker
 - Python virtual environments
-- AWS (EC2 and S3)
+- AWS (EC2, S3 and cli)
 - UFW and Fail2Ban

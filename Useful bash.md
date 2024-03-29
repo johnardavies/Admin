@@ -51,6 +51,9 @@ The S keeps matching non-whitespace till you hit the end of the string`
 **Gets all the text after hashtags in a file (the_file.py) and sends it to a file the_comments.txt i.e. extracts comments in R and Python files**\
 `$ sed -n -e 's/^.*# //p' the_file.py |sed 's/}//'  >> the_comments.txt`
 
+**Removes all text from @ inclusive and sends the output to new_file.txt**\
+`$ sed -i 's/@.*//' "$filename" > new_file.txt`
+
 **Gets all the text between the tags < and > in a text file and outputs this to a text file with separating semi-colons**\
 `$ grep -oE "<([^>]*)>" input.txt| sed 's/<\(.*\)>/\1;/' > output.txt`
 

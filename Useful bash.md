@@ -267,3 +267,7 @@ The order of times is Minute, Hour, Day of Month, Month of Year, Day of week
 **Config file to set up a static ip address**\
 `$ sudo nano /etc/dhcpcd.conf`
 
+## System things
+**Get my environment variables**\
+`printenv` 
+

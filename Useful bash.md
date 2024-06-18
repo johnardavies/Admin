@@ -271,3 +271,9 @@ The order of times is Minute, Hour, Day of Month, Month of Year, Day of week
 **Get my environment variables**\
 `printenv` 
 
+## Running things
+**Run in current shell**\
+`$ source shell_script.sh`  or `$ . shell_script.sh`
+
+**Launches new shell to run script**\
+`$ .\shell_script.sh`

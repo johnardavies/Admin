@@ -269,7 +269,10 @@ The order of times is Minute, Hour, Day of Month, Month of Year, Day of week
 
 ## System things
 **Get my environment variables**\
-`printenv` 
+`$ printenv` 
+
+**See my path**\
+`$ echo $PATH`
 
 ## Running things
 **Run in current shell**\

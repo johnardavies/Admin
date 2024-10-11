@@ -1,0 +1,24 @@
+// Example python config file for the VS Code debugger. Reference as launch.json
+{
+"version": "0.2.0",   
+"configurations":[
+{
+"name": "Python: Projec",
+"type": "python",
+"request": "launch",
+"program": "${file}",
+"python": "/repo_path/repo_name/venv/bin/python3",
+"console": "integratedTerminal",
+"cwd": "/repo_path/src",
+"env": {
+        "PYTHONPATH": "/repo_path/repo_name",
+        "PATH": "${PATH}:/repo_path/repo_name/src",
+        "_RUN_MODE": "debug", // Sets up a run mode
+    
+        "AWS_ACCESS_KEY_ID": "xxxxxxx",
+        "AWS_SECRET_ACCESS_KEY": "yyyyyyyy",
+        "AWS_SESSION_TOKEN": "zzzzzzzz"
+    }
+}
+]
+}

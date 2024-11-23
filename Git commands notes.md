@@ -30,6 +30,9 @@ The commits by a given author (--author) and for the details of what has changed
 **gets the difference between two branches (branch 1 and branch 2) head**\
 `$ git diff branch1..branch2`
 
+**Lists the file being tracked in the repo**\
+`git ls-files`
+
 **Lists the files that are being tracked in the master branch**\
 `$ git ls-tree -r master --name-only`
 
@@ -77,6 +80,10 @@ The commits by a given author (--author) and for the details of what has changed
 
 **Undoes uncommited changes to a file permanently. It updates the working directory and not the indez**\
 `git checkout -- file`
+
+## Removing files from being tracked but keep locally
+**Removing files from being tracked but keep locally**
+`git rm -r --cached folder`
 
 ## Stashing
 

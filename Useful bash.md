@@ -70,6 +70,9 @@ Piping sort to uniq can do this, but may fail with whitespace. Piping the sort t
 **To look at a large file, type q to exit**\
 `$  less file` 
 
+**Get lines 120 to 130 from a yaml file**\
+`sed -n '120,130p' yaml-example.yml`
+
 ***Get the first line and line 206 from usage.csv***\
 `sed -n -e 1p  -e  206p usage.csv`
 

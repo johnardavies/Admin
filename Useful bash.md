@@ -274,6 +274,14 @@ The order of times is Minute, Hour, Day of Month, Month of Year, Day of week
 **Get my environment variables**\
 `$ printenv` 
 
+**Set the environment variables temporarily (here one called API_KEY)**\
+`export API_KEY=your_key_here`
+
+**Set the environment variables permanently**\
+`Open ~/.zshrc or ~/.bashrc`\
+`Add: export MAPS_API_KEY=your_key_here`\
+`Run: source ~/.zshrc or source ~/.bashrc`
+
 **See my path**\
 `$ echo $PATH`
 

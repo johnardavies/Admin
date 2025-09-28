@@ -291,3 +291,7 @@ The order of times is Minute, Hour, Day of Month, Month of Year, Day of week
 
 **Launches new shell to run script**\
 `$ .\shell_script.sh`
+
+## Authentification
+**Getting my SHA1 hash from key (prompts for password**\
+`$ keytool -list -v -keystore key.jks`

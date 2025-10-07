@@ -87,6 +87,9 @@ Piping sort to uniq can do this, but may fail with whitespace. Piping the sort t
 **copies the results from a grep search of text files for a word (Liverpool in this exampl) to a new directory using ``` ` ` ``` to pass to cp**
 ```$ cp `ggrep -i -l  -r  --include="*.txt" "Liverpool"` filepath_for_where_files_are_to_go```
 
+## Copying content of a file (here example.html) to the clipboard to paste on a Mac
+ `pbcopy < example.html`
+
 ## Changing files
 
 **Remove blank lines from a file**\

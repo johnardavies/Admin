@@ -19,8 +19,11 @@
 **produces a record of commits, type q to exit**\
 `$ git log`
 
-The commits by a given author (--author) and for the details of what has changed (-p)\
+**The commits by a given author (--author) and for the details of what has changed (-p)**\
 `$ git log -p --author="name"`
+
+**Getting the commits on a specific file and the details of what has changed (-p)**\
+`$ git log -p path/to/file`
 
 **search the repo's commit history**\
 `$ git log --all -S "search_term"`

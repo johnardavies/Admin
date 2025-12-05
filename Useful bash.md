@@ -288,8 +288,16 @@ The order of times is Minute, Hour, Day of Month, Month of Year, Day of week
 **See my path**\
 `$ echo $PATH`
 
+**Running a shell script to set environment variables**\
+use `source` as this allows you to set variables in the current shell
+
+**Setting environment variables in Python (Not bash obvs)**\
+
+`import os`\
+`os.environ["USERNAME"]="my_name"`
+
 ## Running things
-**Run in current shell**\
+**Run in current shell**
 `$ source shell_script.sh`  or `$ . shell_script.sh`
 
 **Launches new shell to run script**\

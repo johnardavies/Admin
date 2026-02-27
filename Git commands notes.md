@@ -193,3 +193,10 @@
 `$ rm -fr .git`
 
 
+## Clearing old GitHub credentials to add a new token
+**clearing credentials on a Mac**\
+`git credential-osxkeychain erase`
+
+**clearing credentials on Linux**\
+`git credential reject https://github.com`
+

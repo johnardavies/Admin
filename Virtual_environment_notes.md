@@ -78,6 +78,14 @@
 **install the requirements**
 `$ pip install -r requirements.txt`
 
+## Adding an existing virtual environment to the Jupyter notebook
+
+**install ipykernel to run the next command**
+`pip install --user ipykernel`
+
+**create a condas environment for the notebook**
+`python -m ipykernel install --user --name=virtual_env_name`
+
 
 
 

@@ -285,6 +285,9 @@ The order of times is Minute, Hour, Day of Month, Month of Year, Day of week
 **Connect to wifi with given SSID and password**\
 `$ nmcli dev wifi connect "SSID" password "PASSWORD"`
 
+**See nearby wifi networks**\
+`iwlist wlan0 scan`
+
 ## System things
 **Get my environment variables**\
 `$ printenv` 

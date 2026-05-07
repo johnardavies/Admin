@@ -273,6 +273,18 @@ The order of times is Minute, Hour, Day of Month, Month of Year, Day of week
 **Config file to set up a static ip address**\
 `$ sudo nano /etc/dhcpcd.conf`
 
+**See connected devices**\
+`$ nmcli device status`
+
+**Show active connections**\
+`$ nmcli connection show`
+
+**List nearby wifi**\
+ `$ nmcli dev wifi list`
+ 
+**Connect to wifi with given SSID and password**\
+`$ nmcli dev wifi connect "SSID" password "PASSWORD"`
+
 ## System things
 **Get my environment variables**\
 `$ printenv` 

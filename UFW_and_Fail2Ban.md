@@ -36,6 +36,12 @@ done
 **Allow incoming connections from a specific ip address**\
 `$ sudo ufw allow from ip_address  proto tcp to any port 22`
 
+**Allo tcp connection on port 18789**\
+`$ sudo ufw allow 18789/tcp`
+
+**Delete the allowed tcp connection on port 18789**\
+`$ sudo ufw delete allow 18789/tcp` 
+
 ### Fail2ban commands
 
 **Install Fail2Ban**\
